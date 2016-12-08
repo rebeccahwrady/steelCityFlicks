@@ -25,3 +25,26 @@
 body {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
 }
+.blog-header {
+  margin-bottom: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.blog-header .theater-hero {
+  background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
+  height: 30em;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+.blog-area h2 {
+  text-align: center;
+  color: #650000;
+}
+.blog-area h1 {
+  text-align: center;
+  color: #0f0606;
+}
+.small-input-container {
+  padding-left: 0;
+}
