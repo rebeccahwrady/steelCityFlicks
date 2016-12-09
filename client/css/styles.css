@@ -22,8 +22,9 @@
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-size: 1.25em;
 }
-body {
+.main {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
+  height: 100vh;
 }
 .blog-header {
   margin-bottom: 0;
@@ -45,6 +46,20 @@ body {
   text-align: center;
   color: #0f0606;
 }
+.blog-area .panel-default {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.blog-area .panel-default .panel-body {
+  height: 13em;
+}
+.blog-area .panel-default .panel-body img {
+  height: 12em;
+  width: 20em;
+  margin-top: 1em;
+}
 .small-input-container {
   padding-left: 0;
 }
+/* FONTS */
+/* COLORS */
