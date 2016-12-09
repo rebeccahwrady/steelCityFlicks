@@ -163,6 +163,18 @@ a.link {
     display: none;
   }
 }
+#theater-seats {
+  background-image: url("../resources/theater-seats.jpg");
+  background-size: cover;
+  height: 25em;
+}
+#theater-seats h1 {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  color: white;
+}
+#theater-seats .h1Container {
+  padding-top: 1em;
+}
 #select-tickets {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
