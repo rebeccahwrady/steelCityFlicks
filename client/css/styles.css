@@ -163,6 +163,14 @@ a.link {
     display: none;
   }
 }
+#select-tickets {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+#select-tickets .glyphicon {
+  font-size: 0.75em;
+  color: red;
+}
 .small-input-container {
   padding-left: 0;
 }
