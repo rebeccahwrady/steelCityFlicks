@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Steel City Flicks</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
 
     <!-- navbar -->
     <nav class="navbar navbar-inverse">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav p-b-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">What's Playing?<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#whatsplaying">What's Playing?<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">What's Cooking?</a>
+                    <a class="nav-link" href="#whatscoking">What's Cooking?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#speakers">What's Happening?</a>
+                    <a class="nav-link" href="#whatshappening">What's Happening?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#schedule">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
             </ul>
-            <a class="navbar-brand pull-sm-right m-r-0 hidden-xs-down" href="http://www.teamtreehouse.com">Presented by Treehouse</a>
+            <a class="navbar-brand pull-sm-right m-r-0 hidden-xs-down" href="http://www.depotu.io">Presented by DepotU</a>
         </div>
     </nav>
     <!-- /navbar -->
@@ -42,7 +29,7 @@
             <p class="lead">Best Flicks in Town!</p>
 
             <div class="btn-group m-t-2" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Buy Tickets Now</button>
+                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#register">Buy Tickets</button>
                 <a class="btn btn-secondary btn-lg" href="#nowplaying">Now Playing</a>
             </div>
         </div>
@@ -51,100 +38,115 @@
 
     <div class="container p-t-2">
 
-        <!-- about -->
-        <div id="about" class="row">
-            <div class="col-lg-4 col-lg-push-4">
-                <h3 class="m-b-2">About Full Stack Conf</h3>
-                <img class="m-b-1 img-fluid img-rounded hidden-xs-down" src="img/pdx.jpg" alt="Portland">
-                <p>The beautiful city of Portland, Oregon will be the host city for Full Stack Conf!</p>
-                <p>Explore the future of JavaScript with a lineup of industry professionals. Discover new techniques to advance your career as a web developer.</p>
-            </div>
-
-            <div class="col-lg-4 col-lg-pull-4">
-                <h3 class="m-b-2">Expert Speakers</h3>
-                <p>Our expert speaker lineup was just announced, so don't wait too long before grabbing your tickets!</p>
-                <p>Want to meet the international JavaScript community and share skills with some of the world's top experts, hackers, and makers? Be the first to know what to expect for the future of JavaScript.</p>
-                <p>Full Stack Conf is committed to being inclusive and welcoming for everyone. We look forward to another intensive day of learning and sharing.</p>
-            </div>
-
-            <div class="col-lg-4">
-                <h3 class="m-b-2">What You'll Learn</h3>
-                <div class="list-group">
-                    <a href="#" class="list-group-item"><strong>MongoDB</strong>: NoSQL database</a>
-                    <a href="#" class="list-group-item"><strong>Angular</strong>: JavaScript framework </a>
-                    <a href="#" class="list-group-item"><strong>Express</strong>: Framework for Node</a>
-                    <a href="#" class="list-group-item"><strong>Node.js</strong>: JavaScript environment</a>
-                    <a href="#" class="list-group-item"><strong>ES2015</strong>: Latest version of JavaScript</a>
-                    <a href="#" class="list-group-item"><strong>Babel</strong>: JavaScript compiler</a>
-                </div>
-            </div>
-        </div>
-        <!-- /about -->
-
         <!-- speakers -->
-        <h1 id="speakers" class="display-4 text-xs-center m-y-3 text-muted">Speakers</h1>
+        <h1 id="movies" class="display-4 text-xs-center m-y-3 text-muted">Movies</h1>
 
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/angie.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Angie McAngular</h4>
-                        <p class="card-text">Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p>
-                    </div>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="img/princess_bride.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">The Princess Bride</h4>
+                    <p class="card-text">A fairy tale adventure about a beautiful young woman and her one true love. He must find her after a long separation and save her. They must battle the evils of the mythical kingdom of Florin to be reunited with each other. Based on
+                        the William Goldman novel "The Princess Bride" which earned its own loyal audience.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/nodestradamus.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">NodeStradamus</h4>
-                        <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
-                    </div>
+            <div class="card">
+                <img class="card-img-top" src="img/ArmyofDarkness.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Army of Darkness</h4>
+                    <p class="card-text">3rd Evil Dead movie. Ash (Bruce Campbell) finds himself trapped in medieval times. He must quest for the Necronomicon, a book of evil which can return him to his time. Unfortunately, he releases the evil trapped inside the book and
+                        unleashes an army of the dead.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/geo.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Geo "Lo" Cation</h4>
-                        <p class="card-text">Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p>
-                    </div>
+            <div class="card">
+                <img class="card-img-top" src="img/lebowski2.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">The Big Lebowski</h4>
+                    <p class="card-text">Jeff Lebowski who insists on being called "the Dude," a laid-back, easygoing burnout who happens to have the same name as a millionaire whose wife owes a lot of dangerous people a whole bunch of money -- resulting in the Dude having
+                        his rug soiled, sending him spiraling into the Los Angeles underworld.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/ecma.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Ecma Scriptnstuff</h4>
-                        <p class="card-text">Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/jay.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Jay Query</h4>
-                        <p class="card-text">Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/json.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Json Babel</h4>
-                        <p class="card-text">All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
-                    </div>
+            <div class="card">
+                <img class="card-img-top" src="img/greenmile.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">The Big Lebowski</h4>
+                    <p class="card-text">Paul Edgecomb (Tom Hanks) walked the mile with a variety of cons. He had never encountered someone like John Coffey (Michael Clarke Duncan), a massive black man convicted of brutally killing a pair of young sisters. Coffey had the
+                        size and strength to kill anyone, but not the demeanor. Beyond his simple, naive nature and a deathly fear of the dark, Coffey seemed to possess a prodigious, supernatural gift. Paul began to question whether Coffey was truly guilty
+                        of murdering the two girls.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>
+
+        <!--<div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/princess_bride.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">The Princess Bride</h4>
+                        <p class="card-text">A fairy tale adventure about a beautiful young woman and her one true love. He must find her after a long separation and save her. They must battle the evils of the mythical kingdom of Florin to be reunited with each other. Based
+                            on the William Goldman novel "The Princess Bride" which earned its own loyal audience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/ArmyofDarkness.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Army of Darkness</h4>
+                        <p class="card-text">3rd Evil Dead movie. Ash (Bruce Campbell) finds himself trapped in medieval times. He must quest for the Necronomicon, a book of evil which can return him to his time. Unfortunately, he releases the evil trapped inside the book
+                            and unleashes an army of the dead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/lebowski2.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">The Big Lebowski</h4>
+                        <p class="card-text">Jeff Lebowski who insists on being called "the Dude," a laid-back, easygoing burnout who happens to have the same name as a millionaire whose wife owes a lot of dangerous people a whole bunch of money -- resulting in the Dude having
+                            his rug soiled, sending him spiraling into the Los Angeles underworld.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/greenmile.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">The Green Mile</h4>
+                        <p class="card-text">Paul Edgecomb (Tom Hanks) walked the mile with a variety of cons. He had never encountered someone like John Coffey (Michael Clarke Duncan), a massive black man convicted of brutally killing a pair of young sisters. Coffey had
+                            the size and strength to kill anyone, but not the demeanor. Beyond his simple, naive nature and a deathly fear of the dark, Coffey seemed to possess a prodigious, supernatural gift. Paul began to question whether Coffey was
+                            truly guilty of murdering the two girls.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/usualsuspects.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">The Usual Suspects</h4>
+                        <p class="card-text">The Usual Suspects centers on five criminals (played by Gabriel Byrne, Kevin Spacey, Benicio Del Toro, Kevin Pollak, and Stephen Baldwin) who meet in a police lineup and decide to pull off a heist together.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/BadSanta.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Bad Santa</h4>
+                        <p class="card-text">The drunkard Willie and his partner, the midget Marcus, work once a year, near Christmas, dressed like Santa Claus and his helper elf in department stores. However, their intent is to rob the place in the Christmas Eve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
         <!-- /speakers -->
 
         <!-- schedule -->
@@ -152,58 +154,53 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-                <h4 class="list-group-item-heading">Keynote: Internet of Things <span class="label label-info label-pill pull-xs-right">9:00am</span></h4>
-                NodeStradamus
+                <h4 class="list-group-item-heading">The Princess Bride <span class="label label-danger label-pill pull-xs-right">5:00am</span></h4>
+                PG 1987 ‧ Fantasy/Fantasy ‧ 1h 38m
             </li>
             <li class="list-group-item">
-                <h4 class="list-group-item-heading">Angular Basics <span class="label label-info label-pill pull-xs-right">10:00am</span></h4>
-                Angie McAngular
+                <h4 class="list-group-item-heading">Army of Darkness<span class="label label-danger label-pill pull-xs-right">6:00am</span></h4>
+                R 1992 ‧ Fantasy/Fantasy ‧ 1h 36m
             </li>
             <li class="list-group-item">
-                <h4 class="list-group-item-heading">Hey, Mongo! <span class="label label-info label-pill pull-xs-right">11:00am</span></h4>
-                Jay Query
+                <h4 class="list-group-item-heading">The Big Lebowski<span class="label label-danger label-pill pull-xs-right">7:00pm</span></h4>
+                R 1998 ‧ Indie film/Stoner film ‧ 1h 59m
             </li>
-            <li class="list-group-item list-group-item-success">
-                <h4 class="list-group-item-heading">Lunch <span class="label label-info label-pill pull-xs-right">12:00pm</span></h4>
-                Free pizza for everyone!
-            </li>
-            <li class="list-group-item">
-                <h4 class="list-group-item-heading">Introducing ES2015 <span class="label label-info label-pill pull-xs-right">1:00pm</span></h4>
-                Ecma Scriptnstuff
+            <li class="list-group-item list-group-item-danger">
+                <h4 class="list-group-item-heading">HAPPY HOUR<span class="label label-danger label-pill pull-xs-right">8:00pm</span></h4>
+                HAPPY HOUR IS FROM 8:00 PM TO 9:00 PM
             </li>
             <li class="list-group-item">
-                <h4 class="list-group-item-heading">Gettin' MEAN <span class="label label-info label-pill pull-xs-right">2:00pm</span></h4>
-                Geo "Lo" Cation
+                <h4 class="list-group-item-heading">The Green Mile <span class="label label-danger label-pill pull-xs-right">9:00pm</span></h4>
+                R 1999 ‧ Fantasy/Crime film ‧ 3h 9m
             </li>
             <li class="list-group-item">
-                <h4 class="list-group-item-heading">What's Babel? <span class="label label-info label-pill pull-xs-right">3:00pm</span></h4>
-                Json Babel
+                <h4 class="list-group-item-heading">The Usual Suspects <span class="label label-danger label-pill pull-xs-right">10:00pm</span></h4>
+                R 1995 ‧ Crime film/Drama film ‧ 1h 48m
+            </li>
+            <li class="list-group-item">
+                <h4 class="list-group-item-heading">Bad Santa <span class="label label-danger label-pill pull-xs-right">11:00pm</span></h4>
+                R 2003 ‧ Comedy/Crime ‧ 1h 38m
             </li>
         </ul>
         <!-- /schedule -->
 
         <!-- callout button -->
-        <button type="button" class="btn btn-info-outline btn-lg center-block m-y-3" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now</button>
+        <button type="button" class="btn btn-danger-outline btn-lg center-block m-y-3" data-toggle="modal" data-target="#register">Don't Miss Out, Buy Tickets Now</button>
 
         <!-- signup form -->
-        <hr>
-        <div class="row p-y-2 text-muted">
-            <div class="col-md-6 col-xl-5">
-                <p><strong>About Treehouse</strong></p>
-                <p>Treehouse brings affordable technology education to people everywhere to help them achieve their dreams and change the world.</p>
-            </div>
-            <div class="col-md-6 col-xl-5 col-xl-offset-2">
-                <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email">
-                    <span class="input-group-btn">
+        <!--<hr>
+        <div class="col-md-6 col-xl-5 col-xl-offset-2">
+            <p><strong>Stay up-to-date on Steel City Flicks</strong></p>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email">
+                <span class="input-group-btn">
 			        <button class="btn btn-primary" type="button">Sign up</button>
 			      </span>
-                </div>
             </div>
         </div>
-        <hr>
-        <!-- /signup form -->
+    </div>
+    <hr>
+    <!-- /signup form -->
 
         <!-- footer -->
         <div class="row p-y-1">
@@ -223,17 +220,17 @@
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">CSS Conf</a>
-                                <a class="dropdown-item" href="#">Python Conf</a>
-                                <a class="dropdown-item" href="#">Java Conf</a>
-                                <a class="dropdown-item" href="#">Swift Conf</a>
+                                <a class="dropdown-item" href="#">"</a>
+                                <a class="dropdown-item" href="#">"</a>
+                                <a class="dropdown-item" href="#">"</a>
+                                <a class="dropdown-item" href="#">"</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-md-5 text-md-right">
-                <small>&copy; 2016 Full Stack Conf &amp; Treehouse</small>
+                <small>&copy; 2016 Steel City Flicks; DepotU</small>
             </div>
         </div>
         <!-- /footer -->
@@ -252,7 +249,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-                    <h4 class="modal-title">Register for Full Stack Conf</h4>
+                    <h4 class="modal-title">Buy Tickets Now</h4>
                 </div>
                 <div class="modal-body">
                     <!-- registration form -->
@@ -274,7 +271,7 @@
                             <input type="email" class="form-control form-control-danger" id="mail">
                         </fieldset>
                         <fieldset class="form-group">
-                            <label for="role">Job Role:</label>
+                            <label for="role">Movie and Dinner</label>
                             <select class="c-select form-control" id="role" name="user_role">
 									<option value="full stack js developer">Full Stack JavaScript Developer</option>
 									<option value="front end developer">Front End Developer</option>
@@ -377,10 +374,3 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-
-    <!-- jQuery first, then bootstrap js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-</body>
-
-</html>
