@@ -38,7 +38,7 @@ app.controller('myReviewsPageCtrl', ['$scope', '$rootScope', '$location', //this
 
 app.controller('myEventsPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the events page html
     function($scope, $rootScope, $location) {
-
+        console.log('events page');
     }
 ]);
 
