@@ -40,7 +40,7 @@ app.controller('myEventsPageCtrl', ['$scope', 'BlogpostFactory', '$location', //
     function($scope, BlogpostFactory, $location) {
         console.log('events page');
 
-        // $scope.blogposts = BlogpostFactory.query();
+        $scope.blogposts = BlogpostFactory.query();
         // console.log(blogposts);
 
         $scope.goToSinglePost = function (id) {
