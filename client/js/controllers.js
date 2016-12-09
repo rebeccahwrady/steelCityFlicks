@@ -2,6 +2,19 @@ var app = angular.module('myFlicks.controllers',[]); //this is where you create 
 
 app.controller('myHomePageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the home page html
     function($scope, $rootScope, $location) {
+        $(function () {
+	$('.box').hover(
+		function () {
+			var overlay = $(this).find('.box-overlay');
+			overlay.removeClass(overlay.data('return')).addClass(overlay.data('hover'));
+		},
+		function () {
+			var overlay = $(this).find('.box-overlay');		
+			overlay.removeClass(overlay.data('hover')).addClass(overlay.data('return'));
+
+		}
+	);
+});
 
     }
 ]);
