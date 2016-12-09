@@ -31,10 +31,10 @@ app.config(['$routeProvider', function($routeProvider) {
         //     controller: 'myReviewsPageCtrl'
         // })
         //  this one needs to have the event ids worked into it!
-        // .when('/events', {
-        //     templateUrl: 'views/events.html',
-        //     controller: 'myEventsPageCtrl'
-        // })
+        .when('/events', {
+            templateUrl: 'views/events.html',
+            controller: 'myEventsPageCtrl'
+        })
         // this one needs to have the reviews ids worked into it!
         .when('/tickets', {
             templateUrl: 'views/tickets.html',
