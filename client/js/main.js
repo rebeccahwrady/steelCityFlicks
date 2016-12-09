@@ -1,4 +1,4 @@
-var app = angular.module('myFlicks', ['ngRoute', 'myFlicks.controllers']);
+var app = angular.module('myFlicks', ['ngRoute', 'ngResource', 'myFlicks.controllers', 'myFlicks.factories']);
 
 
 //this is your address book
@@ -34,6 +34,11 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/events', {
             templateUrl: 'views/events.html',
             controller: 'myEventsPageCtrl'
+        })
+
+        .when('/newpost', {
+            templateUrl: 'views/newpost.html',
+            controller: 'NewPostController'
         })
         // this one needs to have the reviews ids worked into it!
         .when('/tickets', {
