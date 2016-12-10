@@ -1,0 +1,10 @@
+<div class="singlepost">
+    <h1>{{ singleblog.title }}</h1>
+    <h2>{{ singleblog.author }}</h2>
+    <h3>{{ singleblog.content }}</h3>
+    <h4>{{ singleblog.createdAt | date: 'short' }}</h4>
+</div>
+
+<a ng-href="/#/blogposts"><button>Go Home</button></a>
+<button ng-click="goToEditPost(singleblog.id)">Edit</button>
+<button ng-click="deletePost()">Delete</button>

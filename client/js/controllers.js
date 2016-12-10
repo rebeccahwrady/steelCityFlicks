@@ -62,6 +62,26 @@ app.controller('myEventsPageCtrl', ['$scope', 'BlogpostFactory', '$location', //
     }
 ]);
 
+app.controller('SinglePostController', ['$scope', '$routeParams', 'BlogpostFactory', '$location', function ($scope, $routeParams, BlogpostFactory, $location) {
+        //gets the ID of the post and stores in var, do this for edit post as well
+        var theidoftheblogpost = $routeParams.id;
+        //gets the specific blog with the id 
+        $scope.singleblog = BlogpostFactory.get(
+            { id: theidoftheblogpost }
+        );
+
+        $scope.goToEditPost = function (id) {
+            $location.path('/editpost/' + id);
+        }
+
+        $scope.deletePost = function() {
+            $scope.singleblog.$delete(function () {
+                console.log('i deleted');
+                $location.path('/events');
+            })
+        }
+    }])
+
 app.controller('NewPostController', ['$scope', 'BlogpostFactory', '$location', function ($scope, BlogpostFactory, $location) {
        console.log('newpost page');
        
@@ -89,6 +109,22 @@ app.controller('NewPostController', ['$scope', 'BlogpostFactory', '$location', f
                 console.log(p);
             })
         }
+    }])
+
+app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams', '$location', function ($scope, BlogpostFactory, $routeParams, $location) {
+        var theidoftheblogpost = $routeParams.id;
+        //gets the specific blog with the id 
+        $scope.singleblog = BlogpostFactory.get(
+            { id: theidoftheblogpost }
+        );
+
+        $scope.updatePost = function () {
+            $scope.singleblog.$update(function () {
+                console.log('i updated');
+                $location.path('/events');
+            })
+        }
+
     }])
 
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the ticket purchase page html

@@ -40,6 +40,15 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/newpost.html',
             controller: 'NewPostController'
         })
+        .when('/events/:id', {
+                templateUrl: 'views/singlepost.html',
+                controller: 'SinglePostController'
+            })
+
+        .when('/editpost/:id', {
+                templateUrl: 'views/editpost.html',
+                controller: 'EditPostController'
+            })
         // this one needs to have the reviews ids worked into it!
         .when('/tickets', {
             templateUrl: 'views/tickets.html',
