@@ -20,20 +20,97 @@
 </head>
 
 <body>
-    <!--nav bar placeholder-->
-    
+    <!--nav bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header covershark">
+                <a href="/#/home/">
+                    <img class="image1" src="../images/Home/logo-color.svg">
+                    <img class="image2" src="../images/Home/coversharks-mark-white.svg">
+                </a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar, #anotherID, #myUl" aria-expanded="false">
+                        
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="anotherID">
+                <div id="myNavbar"></div>
+                <ul id="myUl" class="nav navbar-nav navbar-right links">
+                    <li>
+                        <a href="https://www.facebook.com">
+                            <div class="facebook page-scroll"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/coversharks">
+                            <div class="twitter page-scroll"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right words">
+                    <li class="page-scroll"><a class="page-scroll" href="/#/howtoplay/">HOW TO PLAY</a></li>
+                    <li>
+                        <a class="page-scroll" href="/#/about/">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#/promotions/">PROMOTIONS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
 
 
 
 
-    <!--ng-view is where html templetes will be loaded when page is navigated to-->
+    <!--ng-view is where html templates will be loaded when page is navigated to-->
     <div ng-view></div>
 
-    <!--footer placeholder-->
+    <!--footer-->
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 footer-logos">
+                <img class="footer-logo" src="../images/Home/logo-blue.svg" class="img-responsive"><br>
+                <img class="footer-fb" src="../images/Home/fb-blue.svg" class="img-responsive">
+                <img class="footer-twitter" src="../images/Home/twitter-blue.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2">
+                <ul>
+                    <li class="first-list">HOW TO PLAY</li>
+                    <li class="first-list">ABOUT</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul>
+                    <li>PROMOTIONS</li>
+                    <li>VIDEOS</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary btn-lg">CONTACT</button>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row final">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p>COVERSHARKS LLC</p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <p>POWERED BY PLATYPI</p>
+            </div>
+        </div>
+    </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!--general angular library-->
