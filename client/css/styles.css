@@ -256,11 +256,19 @@ button {
   height: 4.9em;
   float: left;
 }
+.navbar .title {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  color: #650000;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .navbar .words {
   font-family: "Cookie", cursive, Times, serif;
   font-weight: 600;
   margin-top: 0.5em;
-  color: white;
+  color: #650000;
   font-size: 1.25em;
 }
 .navbar img {
@@ -319,21 +327,21 @@ button {
   margin-top: 3em;
 }
 .footer ul li {
-  color: steelblue;
-  font-family: "Work Sans", sans-serif;
+  color: #650000;
+  font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
 }
 .footer .first-list {
-  border-right: 1px solid steelblue;
+  border-right: 1px solid #650000;
 }
 .footer button {
-  background-color: mediumseagreen;
+  background-color: #650000;
   margin-top: 2em;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 400;
   margin-left: 5em;
 }
 .footer .final {
   background-color: #0f0606;
-  color: darkslategray;
+  color: #650000;
 }
