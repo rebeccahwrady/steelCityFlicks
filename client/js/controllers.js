@@ -129,6 +129,18 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
 
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the ticket purchase page html
     function($scope, $rootScope, $location) {
+        Stripe.card.createToken({
+            number: $scope.cardNum,
+            cvc: $scope.cvc,
+            exp_month: $scope.expiryMonth,
+            exp_year: $scope.expiryYear,
+            }), function (status, response) {
+                    if (response.error) {
+                        console.log(response.error);
+                    } else {
+                        console.log("success!")
+                    }
+            }
+    }])
+    
 
-    }
-]);
