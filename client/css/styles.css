@@ -96,12 +96,22 @@ a.link {
   text-align: center;
   color: #0f0606;
 }
+.blog-area .title {
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
 .blog-area .panel-default {
   margin-left: 3em;
   margin-right: 3em;
 }
 .blog-area .panel-default .panel-body {
   height: 13em;
+}
+.blog-area .panel-default .panel-body h1,
+.blog-area .panel-default .panel-body h3,
+.blog-area .panel-default .panel-body p,
+.blog-area .panel-default .panel-body h6,
+.blog-area .panel-default .panel-body button {
+  font-family: "Rye", cursive, Arial, sans-serif;
 }
 .blog-area .panel-default .panel-body img {
   height: 12em;
@@ -213,6 +223,15 @@ button {
 .container-fluid .curtain .singlepost {
   text-align: center;
   margin-top: 20em;
+}
+.container-fluid .curtain .singlepost h1,
+.container-fluid .curtain .singlepost h2,
+.container-fluid .curtain .singlepost h3,
+.container-fluid .curtain .singlepost h4 {
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.container-fluid .curtain button {
+  font-family: "Rye", cursive, Arial, sans-serif;
 }
 @media screen and (max-width: 575px) {
   li {
