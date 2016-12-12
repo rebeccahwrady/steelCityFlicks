@@ -77,6 +77,9 @@ a.link {
   left: 0;
   z-index: 15;
 }
+#form-container {
+  margin-top: 5em;
+}
 .blog-header {
   margin-bottom: 0;
   margin-left: -15px;
@@ -172,14 +175,15 @@ a.link {
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
   background-size: cover;
-  height: 25em;
+  height: 30em;
+  background-repeat: no-repeat;
 }
 #theater-seats h1 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
 }
 #theater-seats .h1Container {
-  padding-top: 1em;
+  padding-top: 10em;
 }
 #select-tickets {
   margin-top: 1.5em;
@@ -194,8 +198,10 @@ a.link {
 }
 button {
   background-color: #650000;
-  color: white;
+  color: #0f0606;
   text-decoration: none;
+  font-family: "Rye", cursive, Arial, sans-serif;
+  letter-spacing: 0.2em;
 }
 /* FONTS */
 /* COLORS */
