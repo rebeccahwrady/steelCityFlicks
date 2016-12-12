@@ -4,7 +4,7 @@ var app = angular.module('myFlicks', ['ngRoute', 'ngResource', 'myFlicks.control
 //this is your address book
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/home', { //when we nav to localhost:3000/#/welcome...
+        .when('/home', { //when we nav to localhost:3000/#/home...
             templateUrl: 'views/home.html', //this is the file you are getting
             controller: 'myHomePageCtrl' //this is the controller that is called
         })

@@ -57,10 +57,6 @@
     </nav>
 
 
-
-
-
-
     <!--ng-view is where html templates will be loaded when page is navigated to-->
     <div ng-view></div>
 
@@ -86,7 +82,7 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <button type="submit" class="btn btn-primary btn-lg">CONTACT</button>
+                <button type="submit" class="btn btn-primary btn-lg"></button>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -118,6 +114,11 @@
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
         Stripe.setPublishableKey('pk_test_pPifnRUPhkQmBiRad4tewI83');
+    </script>
+    <!--Google Maps API-->
+    <script>
+        async defer
+        src ="https://maps.googleapis.com/maps/api/js?key=MYAPIKEY=initMap"
     </script>
 
 </body>

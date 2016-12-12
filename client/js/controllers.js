@@ -21,7 +21,17 @@ app.controller('myHomePageCtrl', ['$scope', '$rootScope', '$location', //this is
 
 app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the about page html
     function($scope, $rootScope, $location) {
-
+        function initMap(){
+            var coordinates = {lat: 33.511920, lng: -86.812562};
+            var map = new google.maps.Map($('#googleMap'), {
+                zoom: 10,
+                center: coordinates
+            });
+            var marker = new google.maps.Marker({
+                position: coordinates,
+                map: map
+            });
+        }
     }
 ]);
 
