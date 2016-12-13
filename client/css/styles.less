@@ -181,8 +181,10 @@
          }
     }
 
-    .first-list {
-             border-right: 1px solid @mainRed;
+    .footer-li {
+             font-size: 2em;
+             color: @mainRed;
+             font-family: @heroFont;
     }
 
     button {
@@ -194,6 +196,10 @@
         font-weight: 400;
         margin-left: 5em;
         background-image: url('../resources/envelope.svg');
+    }
+   
+   .btn:focus, .btn:active:focus, .btn.active:focus {
+        outline: 0 none;
     }
 
     .final {

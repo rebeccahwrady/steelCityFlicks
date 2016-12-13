@@ -381,8 +381,10 @@ button {
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
 }
-.footer .first-list {
-  border-right: 1px solid #650000;
+.footer .footer-li {
+  font-size: 2em;
+  color: #650000;
+  font-family: "Rye", cursive, Arial, sans-serif;
 }
 .footer button {
   background-color: #F29C1F;
@@ -393,6 +395,11 @@ button {
   font-weight: 400;
   margin-left: 5em;
   background-image: url('../resources/envelope.svg');
+}
+.footer .btn:focus,
+.footer .btn:active:focus,
+.footer .btn.active:focus {
+  outline: 0 none;
 }
 .footer .final {
   background-color: #0f0606;
