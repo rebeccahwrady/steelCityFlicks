@@ -98,12 +98,15 @@ a.link {
   background-size: cover;
 }
 .blog-area {
-  background-color: #2f0000;
+  background-color: white;
 }
-.blog-area h1,
-.blog-area h2 {
+.blog-area h1 {
   text-align: center;
   color: #0f0606;
+}
+.blog-area h2 {
+  color: #650000;
+  text-align: center;
 }
 .blog-area .title {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -114,7 +117,6 @@ a.link {
 }
 .blog-area .panel-default .panel-body {
   height: 13em;
-  background-color: black;
 }
 .blog-area .panel-default .panel-body h1,
 .blog-area .panel-default .panel-body h3,
@@ -123,16 +125,21 @@ a.link {
 .blog-area .panel-default .panel-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
 }
+.blog-area .panel-default .panel-body h3 {
+  color: #650000;
+}
 .blog-area .panel-default .panel-body h1,
-.blog-area .panel-default .panel-body h3,
 .blog-area .panel-default .panel-body p,
 .blog-area .panel-default .panel-body h6 {
-  color: #650000;
+  color: #0f0606;
 }
 .blog-area .panel-default .panel-body img {
   height: 12em;
   width: 20em;
   margin-top: 1em;
+}
+.blog-area .panel-default .panel-body button {
+  color: white;
 }
 .menu-header {
   padding-bottom: 15px;
