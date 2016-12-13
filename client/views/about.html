@@ -1,13 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-5" id="formContainer">
-            <form>
+        <div class="col-md-5 contactMapContainers">
+            <form name="contact-form" validate>
                 <div class="row">`
                     <div class="col-md-12">
+                        <div data-ng-hide="formError()">
+                            {{errorMessage}}
+                        </div>
+                        <!--USER NAME-->
                         <div class="form-group">
                             <label for="contactName">Name</label>
-                            <input type="text" placeholder="Enter Name" id="nameInput" class="form-control">
+                            <input type="text" placeholder="Enter Name" id="nameInput" class="form-control" data-ng-model="contactData.name" required>
                         </div>
+                        <!--EMAIL-->
                         <div class="form-group">
                             <label for="contactEmail">Email Address</label>
                             <div class="input-group">
@@ -15,24 +20,25 @@
                                     <span class="glyphicon glyphicon-envelope">
                                     </span>
                                 </span>
-                                <input type="text" placeholder="Email" id="emailInput" class="form-control">
+                                <input type="text" placeholder="name@email.com" id="emailInput" class="form-control" data-ng-model="contactData.email" required>
                             </div>
                         </div>
+                        <!--MESSAGE-->
                         <div class="form-group">
                             <label for="contactMessage">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" class="form-control" data-ng-model="contactData.message" required></textarea>
                         </div>
+                        <!--SEND BUTTON-->
                         <div class="form-group">
-                            <button class="btn btn-lg">Send!</button>
+                            <button class="btn btn-lg" data-ng-disabled="sendButtonDisabled" data-ng-click="submit(contactForm)">Send!</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="col-md-7">
-            <div id="addressContainer">
-                <h3>Our Location</h3>
-            </div>
+        <div class="col-md-7 contactMapContainers">
+                <h4>Our Location: 1500 1st Ave N Birmingham, AL 35203</h4>
+                <!--Container for Google Map Display-->
                 <div id="googleMap"></div>
         </div>
     </div>

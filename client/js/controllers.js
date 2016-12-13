@@ -33,6 +33,24 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this i
                 map: map
             });
         }
+        // $scope.result = "hidden";
+        // $scope.resultMessage = "message";
+        // $scope.contactData;
+        // $scope.submitButtonDisabled = false;
+        // $scope.submitted = false;
+        
+        // $scope.submit = function(contactForm){
+        //     console.log(contactForm);
+        //     $scope.submitted = true;
+        //     $scope.submitButtonDisabled = true;
+        //     if(contactForm.$valid){
+        //         $http({
+        //             method: 'POST',
+        //             url: ''
+        //         })
+            // }
+        // }
+
     }
 ]);
 
