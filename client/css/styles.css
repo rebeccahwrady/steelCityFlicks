@@ -311,10 +311,10 @@ button {
   align-items: center;
   justify-content: center;
 }
-.navbar .words {
+.navbar #words {
   font-family: "Cookie", cursive, Times, serif;
   font-weight: 600;
-  margin-top: 0.5em;
+  padding-top: 500px;
   color: #650000;
   font-size: 1.25em;
 }
@@ -395,11 +395,17 @@ button {
   font-weight: 400;
   margin-left: 5em;
   background-image: url('../resources/envelope.svg');
+  outline: none;
 }
-.footer .btn:focus,
-.footer .btn:active:focus,
-.footer .btn.active:focus {
-  outline: 0 none;
+.footer .btn-primary:hover,
+.footer .btn-primary:focus,
+.footer .btn-primary:active,
+.footer .btn-primary.active,
+.footer .open > .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #650000;
+  border-color: #F29C1F;
+  /*set the color you want here*/
 }
 .footer .final {
   background-color: #0f0606;

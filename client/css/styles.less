@@ -96,10 +96,10 @@
         
     }
 
-    .words {
+    #words {
         font-family: @headerFont;
         font-weight: 600;
-        margin-top: 0.5em;
+        padding-top: 500px;
         color: @mainRed;
         font-size: 1.25em;
     }
@@ -196,11 +196,14 @@
         font-weight: 400;
         margin-left: 5em;
         background-image: url('../resources/envelope.svg');
+        outline: none;
     }
    
-   .btn:focus, .btn:active:focus, .btn.active:focus {
-        outline: 0 none;
-    }
+   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: white;
+    background-color: @mainRed;
+    border-color: @gold; /*set the color you want here*/
+}
 
     .final {
         background-color: @black;
