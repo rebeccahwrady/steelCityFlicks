@@ -1,0 +1,26 @@
+.navbar .navbar-brand {
+    color: rgba(255, 255, 255, .85);
+    font-size: 1rem;
+    padding-top: .30rem;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    background: url('../img-ana/theater-4.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 37em;
+    color: white;
+}
+
+.btn,
+.active {
+    transition: .4s;
+}
+
+.display-2 {
+    font-family: 'Berkshire Swash', cursive;
+}
