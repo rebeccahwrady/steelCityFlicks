@@ -380,6 +380,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 13px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .navbar #words {
   font-family: "Cookie", cursive, Times, serif;
@@ -450,6 +451,7 @@ button {
   color: #650000;
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .footer .footer-li {
   font-size: 2em;
