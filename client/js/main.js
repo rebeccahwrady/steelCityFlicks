@@ -1,10 +1,10 @@
-var app = angular.module('myFlicks', ['ngRoute', 'myFlicks.controllers']);
+var app = angular.module('myFlicks', ['ngRoute', 'ngResource', 'myFlicks.controllers', 'myFlicks.factories']);
 
 
 //this is your address book
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/home', { //when we nav to localhost:3000/#/welcome...
+        .when('/home', { //when we nav to localhost:3000/#/home...
             templateUrl: 'views/home.html', //this is the file you are getting
             controller: 'myHomePageCtrl' //this is the controller that is called
         })
@@ -35,6 +35,20 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/events.html',
             controller: 'myEventsPageCtrl'
         })
+
+        .when('/newpost', {
+            templateUrl: 'views/newpost.html',
+            controller: 'NewPostController'
+        })
+        .when('/events/:id', {
+                templateUrl: 'views/singlepost.html',
+                controller: 'SinglePostController'
+            })
+
+        .when('/editpost/:id', {
+                templateUrl: 'views/editpost.html',
+                controller: 'EditPostController'
+            })
         // this one needs to have the reviews ids worked into it!
         .when('/tickets', {
             templateUrl: 'views/tickets.html',

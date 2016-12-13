@@ -14,23 +14,94 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/movies.css">
+    <link rel="stylesheet" href="resources/magic.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/variables.css">
 </head>
 
 <body>
-    <!--nav bar placeholder-->
-    
+    <!--nav bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/#/home/">
+                    <img class="image1" src="../resources/logo.svg">
+                </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar, #anotherID, #myUl" aria-expanded="false">
+                        
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
 
+        <div class="collapse navbar-collapse" id="anotherID">
+            <div id="myNavbar"></div>
+            <ul id="myUl" class="nav navbar-nav navbar-right links">
+                <li>
+                    <a href="https://www.facebook.com">
+                        <div class="facebook page-scroll img-responsive"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com">
+                        <img class="twitter page-scroll" src="../resources/twitter-grey.svg" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
+            <h3 class="title"> Steel City Flicks </h3>
+        </div>
+        </div>
+    </nav>
 
 
-
-
-    <!--ng-view is where html templetes will be loaded when page is navigated to-->
+    <!--ng-view is where html templates will be loaded when page is navigated to-->
     <div ng-view></div>
 
-    <!--footer placeholder-->
+    <!--footer-->
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 footer-logos">                
+                <a href="/#/home/">
+                    <img class="footer-logo" src="../resources/logo.svg">
+                </a><br>
+                <img class="footer-fb" src="../resources/fb-blue.svg" class="img-responsive">
+                <img class="footer-twitter" src="../resources/twitter-blue.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2">
+                <ul>
+                    <li><a href="/#/movies/"class="footer-li">MOVIES</li></a>
+                    <li><a href="/#/menu/"class="footer-li">MENU</li></a>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul>
+                    <li><a href="/#/events/"class="footer-li">EVENTS</li></a>
+                    <li><a href="/#/tickets/"class="footer-li">TICKETS</li></a>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <a href="/#/about/">
+                    <button type="submit" class="btn btn-primary btn-lg"></button>
+                </a>      
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row final">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="words">STEELCITYFLICKS LLC</p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class ="col-md-3">
+                <p class="words">POWERED BY DEPOTU GRADS</p>
+            </div>
+        </div>
+    </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!--general angular library-->
@@ -42,10 +113,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/factories.js"></script>
     <!--Stripe.js-->
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
         Stripe.setPublishableKey('pk_test_pPifnRUPhkQmBiRad4tewI83');
+    </script>
+    <!--Google Maps API-->
+    <script>
+        async defer
+        src ="https://maps.googleapis.com/maps/api/js?key=MYAPIKEY=initMap"
     </script>
 
 </body>
