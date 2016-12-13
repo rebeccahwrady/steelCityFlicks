@@ -1,9 +1,9 @@
 <div class="container-fluid">
-<div class="edit">
-    <textarea ng-model="singleblog.author" placeholder="What's your name?"></textarea>
-    <textarea ng-model="singleblog.title" placeholder="What's your title?"></textarea>
-    <textarea ng-model="singleblog.content" placeholder="What's your message?"></textarea>
+<div class="editpost">
+    <textarea class="smallerbox" ng-model="singleblog.author" placeholder="What's your name?"></textarea>
+    <textarea class="smallerbox" ng-model="singleblog.title" placeholder="What's your title?"></textarea>
+    <textarea class="largerbox" ng-model="singleblog.content" placeholder="What's your message?"></textarea>
+    <button ng-click="updatePost()">Post</button>
 </div>
 </div>
 
-<button ng-click="updatePost()">Post</button>

@@ -97,11 +97,11 @@ a.link {
   width: 100%;
   background-size: cover;
 }
-.blog-area h2 {
-  text-align: center;
-  color: #650000;
+.blog-area {
+  background-color: #650000;
 }
-.blog-area h1 {
+.blog-area h1,
+.blog-area h2 {
   text-align: center;
   color: #0f0606;
 }
@@ -114,6 +114,7 @@ a.link {
 }
 .blog-area .panel-default .panel-body {
   height: 13em;
+  background-color: black;
 }
 .blog-area .panel-default .panel-body h1,
 .blog-area .panel-default .panel-body h3,
@@ -121,6 +122,12 @@ a.link {
 .blog-area .panel-default .panel-body h6,
 .blog-area .panel-default .panel-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
+}
+.blog-area .panel-default .panel-body h1,
+.blog-area .panel-default .panel-body h3,
+.blog-area .panel-default .panel-body p,
+.blog-area .panel-default .panel-body h6 {
+  color: #650000;
 }
 .blog-area .panel-default .panel-body img {
   height: 12em;
@@ -235,6 +242,8 @@ button {
 .container-fluid .curtain .singlepost {
   text-align: center;
   margin-top: 20em;
+  margin-left: 30em;
+  margin-right: 30em;
 }
 .container-fluid .curtain .singlepost h1,
 .container-fluid .curtain .singlepost h2,
@@ -244,6 +253,7 @@ button {
 }
 .container-fluid .curtain button {
   font-family: "Rye", cursive, Arial, sans-serif;
+  color: white;
 }
 .newpost {
   height: 40em;
@@ -271,7 +281,7 @@ button {
 .newpost button {
   color: white;
 }
-.newpost {
+.editpost {
   height: 40em;
   padding-top: 20em;
   background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
@@ -280,21 +290,21 @@ button {
   margin-left: -13px;
   margin-right: -13px;
 }
-.newpost input,
-.newpost button,
-.newpost textarea {
+.editpost input,
+.editpost button,
+.editpost textarea {
   display: block;
   margin: 0 auto;
 }
-.newpost .smallbox {
+.editpost .smallerbox {
   width: 20em;
   height: 2em;
 }
-.newpost .largebox {
+.editpost .largerbox {
   width: 20em;
   height: 10em;
 }
-.newpost button {
+.editpost button {
   color: white;
 }
 @media screen and (max-width: 575px) {
