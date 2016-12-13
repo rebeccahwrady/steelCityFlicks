@@ -21,10 +21,11 @@ app.controller('myHomePageCtrl', ['$scope', '$rootScope', '$location', //this is
 
 app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the about page html
     function($scope, $rootScope, $location) {
-        function initMap(){
+        window.initMap = function(){
             var coordinates = {lat: 33.511920, lng: -86.812562};
-            var map = new google.maps.Map($('#googleMap'), {
-                zoom: 10,
+            divNode = $('#googleMap').get(0);
+            var map = new google.maps.Map(divNode, {
+                zoom: 16,
                 center: coordinates
             });
             var marker = new google.maps.Marker({
@@ -139,20 +140,25 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
 
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the ticket purchase page html
     function($scope, $rootScope, $location) {
+        console.log("this controller");
         $scope.chargeCard = function () {
             Stripe.card.createToken({
                 number: $scope.cardNum,
                 cvc: $scope.cvc,
                 exp_month: $scope.expiryMonth,
                 exp_year: $scope.expiryYear,
-                }), function (status, response) {
+                }, function (status, response) {
                     if (response.error) {
                         console.log(response.error);
+                        console.log(response.id);
+                        console.log(response);
                     } else {
-                        console.log("success!")
+                        console.log("success!");
                     }
-            }
+            });
         };
+
+        console.log()
     }]);
     
 
