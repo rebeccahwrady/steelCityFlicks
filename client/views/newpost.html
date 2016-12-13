@@ -1,7 +1,8 @@
-<div>
-    <input type="text" ng-model="blog.author" placeholder="What's your name?">
-    <input type="text" ng-model="blog.title" placeholder="What's your title?">
-    <input type="text" ng-model="blog.content" placeholder="What's your message?">
-</div>
-
+<div class="container-fluid">   
+<div class="newpost">
+    <textarea class="smallbox" ng-model="blog.author" placeholder="What's your name?"></textarea>
+    <textarea class="smallbox" ng-model="blog.title" placeholder="What's your title?"></textarea>
+    <textarea class="largebox" ng-model="blog.content" placeholder="What's your message?"></textarea>
 <button ng-click="savePost()">Post</button>
+</div>
+</div>

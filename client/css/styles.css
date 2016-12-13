@@ -245,6 +245,58 @@ button {
 .container-fluid .curtain button {
   font-family: "Rye", cursive, Arial, sans-serif;
 }
+.newpost {
+  height: 40em;
+  padding-top: 20em;
+  background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -13px;
+  margin-right: -13px;
+}
+.newpost input,
+.newpost button,
+.newpost textarea {
+  display: block;
+  margin: 0 auto;
+}
+.newpost .smallbox {
+  width: 20em;
+  height: 2em;
+}
+.newpost .largebox {
+  width: 20em;
+  height: 10em;
+}
+.newpost button {
+  color: white;
+}
+.newpost {
+  height: 40em;
+  padding-top: 20em;
+  background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -13px;
+  margin-right: -13px;
+}
+.newpost input,
+.newpost button,
+.newpost textarea {
+  display: block;
+  margin: 0 auto;
+}
+.newpost .smallbox {
+  width: 20em;
+  height: 2em;
+}
+.newpost .largebox {
+  width: 20em;
+  height: 10em;
+}
+.newpost button {
+  color: white;
+}
 @media screen and (max-width: 575px) {
   li {
     display: block;

@@ -1,8 +1,9 @@
-
+<div class="container-fluid">
 <div class="edit">
-    <input type="text" ng-model="singleblog.author" placeholder="What's your name?">
-    <input type="text" ng-model="singleblog.title" placeholder="What's your title?">
-    <input type="text" ng-model="singleblog.content" placeholder="What's your message?">
+    <textarea ng-model="singleblog.author" placeholder="What's your name?"></textarea>
+    <textarea ng-model="singleblog.title" placeholder="What's your title?"></textarea>
+    <textarea ng-model="singleblog.content" placeholder="What's your message?"></textarea>
+</div>
 </div>
 
 <button ng-click="updatePost()">Post</button>
