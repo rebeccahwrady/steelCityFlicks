@@ -98,7 +98,7 @@ a.link {
   background-size: cover;
 }
 .blog-area {
-  background-color: #650000;
+  background-color: #2f0000;
 }
 .blog-area h1,
 .blog-area h2 {
@@ -372,6 +372,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 13px;
 }
 .navbar #words {
   font-family: "Cookie", cursive, Times, serif;
