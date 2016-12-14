@@ -159,6 +159,7 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase',//this is the controller for the ticket purchase page html
     function ($scope, $rootScope, $location, Purchase) {
         console.log("this controller");
+        $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({
                 number: $scope.cardNum,
@@ -168,10 +169,13 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
             }, function (status, response) {
                 if (response.error) {
                     console.log(response.error);
+                    $scope.$apply(function(){
+                        $scope.purchaseError= true;
+                    })
                 } else {
                     var stripeToken = response.id;
                     var purchase = new Purchase({
-                        amountToCharge: 8 * 8.00 * 100,
+                        amountToCharge: $scope.ticketAmount * 8 * 100,
                         token: stripeToken
                     });
 
