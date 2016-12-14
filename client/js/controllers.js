@@ -56,7 +56,271 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this i
 
 app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the menu page html
     function ($scope, $rootScope, $location) {
+        var btn = document.createElement('button');
+        var clickText = document.createTextNode("Can't Decide?");
+        var whichBox = document.getElementsByClassName("dices");
+        var bod = document.getElementsByTagName("body");
 
+        var answerArray = [];
+        var genreArray = ["Action", "Comedy", "Romance"];
+        var villainArray = ["The Joker", "Cruella de Vil", "Lex Luther"];
+        var tasteArray = ["Sweet", "Savory", "Spicy"];
+
+        var val = 0;
+
+
+        btn.appendChild(clickText);
+
+        var firstButton = document.createElement('div')
+        document.body.appendChild(firstButton);
+        firstButton.appendChild(btn);
+
+        var questionDiv = document.createElement('div');
+        questionDiv.setAttribute("id", "questionText");
+        document.body.appendChild(questionDiv);
+
+        var answerDiv = document.createElement('div');
+        answerDiv.setAttribute("class", "diceDivClass");
+        document.body.appendChild(answerDiv);
+
+        btn.addEventListener('click', selectGenre);
+
+        var AnswerBox = function (value) {
+            this.value = value;
+        };
+
+        function selectGenre() {
+            document.body.removeChild(firstButton);
+
+            var question = document.createTextNode("Please Select a Movie Genre");
+            questionDiv.appendChild(question);
+
+            for (var i = 0; i < genreArray.length; i++) {
+                var answer = document.createElement('div');
+                var newAnswer = new AnswerBox(genreArray[i]);
+                var name = document.createTextNode(newAnswer.value);
+                answer.appendChild(name);
+                answer.setAttribute("class", "dices");
+                answer.setAttribute("id", newAnswer.value);
+                answerDiv.appendChild(answer);
+                answer.addEventListener('click', getGenre);
+            }
+        }
+
+        function getGenre() {
+            var genre = this.id;
+            answerArray.push(genre);
+            selectVillain();
+        };
+
+        function selectVillain() {
+            var changeQuestion = document.getElementById("questionText");
+            var textQuest = changeQuestion.childNodes;
+            changeQuestion.removeChild(textQuest[0]);
+            var villainQuest = document.createTextNode("Please Select Your Favorite Villain");
+            changeQuestion.appendChild(villainQuest);
+
+            for (var j = 0; j < genreArray.length; j++) {
+                var answerID = document.getElementById(genreArray[j]);
+                // var answerChild = answerID.childNodes;
+                // var thisChild = answerChild[0];
+                answerDiv.removeChild(answerID);
+            }
+
+            for (var i = 0; i < villainArray.length; i++) {
+                var answer = document.createElement('div');
+                var newAnswer = new AnswerBox(villainArray[i]);
+                var name = document.createTextNode(newAnswer.value);
+                answer.appendChild(name);
+                answer.setAttribute("class", "dices");
+                answer.setAttribute("id", newAnswer.value);
+                answerDiv.appendChild(answer);
+                answer.addEventListener('click', getVillain);
+            }
+        };
+
+        function getVillain() {
+            var villain = this.id;
+            answerArray.push(villain);
+            selectTaste();
+        };
+
+        function selectTaste() {
+            var changeQuestion = document.getElementById("questionText");
+            var textQuest = changeQuestion.childNodes;
+            changeQuestion.removeChild(textQuest[0]);
+            var tasteQuest = document.createTextNode("Please Select What Taste You Are Looking For");
+            changeQuestion.appendChild(tasteQuest);
+
+            for (var j = 0; j < genreArray.length; j++) {
+                var answerID = document.getElementById(villainArray[j]);
+                var answerChild = answerID.childNodes;
+                var thisChild = answerChild[0]
+                answerDiv.removeChild(answerID);
+            }
+
+            for (var i = 0; i < tasteArray.length; i++) {
+                var answer = document.createElement('div');
+                var newAnswer = new AnswerBox(tasteArray[i]);
+                var name = document.createTextNode(newAnswer.value);
+                answer.appendChild(name);
+                answer.setAttribute("class", "dices");
+                answer.setAttribute("id", newAnswer.value);
+                answerDiv.appendChild(answer);
+                answer.addEventListener('click', getSelection);
+            }
+        };
+
+        function getSelection() {
+            var taste = this.id;
+            answerArray.push(taste);
+
+            var changeQuestion = document.getElementById("questionText");
+            var textQuest = changeQuestion.childNodes;
+            changeQuestion.removeChild(textQuest[0]);
+            var orderShould = document.createTextNode("You Should Order...");
+            changeQuestion.appendChild(orderShould);
+
+            for (var j = 0; j < tasteArray.length; j++) {
+                var answerID = document.getElementById(tasteArray[j]);
+                var answerChild = answerID.childNodes;
+                var thisChild = answerChild[0]
+                answerDiv.removeChild(answerID);
+            }
+
+            if (answerArray[0] == "Action") {
+                if (answerArray[1] == "The Joker") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Action, The Joker, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Action, The Joker, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Action, The Joker, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else if (answerArray[1] == "Cruella de Vil") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Action, Cruella de Vil, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Action, Cruella de Vil, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Action, Cruella de Vil, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Action, Lex Luther, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Action, Lex Luther, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Action, Lex Luther, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+            }
+            else if (answerArray[0] == "Comedy") {
+                if (answerArray[1] == "The Joker") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Comedy, The Joker, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Comedy, The Joker, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Comedy, The Joker, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else if (answerArray[1] == "Cruella de Vil") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Comedy, Cruella de Vil, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Comedy, Cruella de Vil, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Comedy, Cruella de Vil, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Comedy, Lex Luther, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Comedy, Lex Luther, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Comedy, Lex Luther, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+            }
+            else {
+                if (answerArray[1] == "The Joker") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Romance, The Joker, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Romance, The Joker, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Romance, The Joker, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else if (answerArray[1] == "Cruella de Vil") {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Romance, Cruella de Vil, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Romance, Cruella de Vil, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Romance, Cruella de Vil, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+                else {
+                    if (answerArray[2] == "Sweet") {
+                        var order = document.createTextNode("Romance, Lex Luther, Sweet");
+                        changeQuestion.appendChild(order);
+                    }
+                    else if (answerArray[2] == "Savory") {
+                        var order = document.createTextNode("Romance, Lex Luther, Savory");
+                        changeQuestion.appendChild(order);
+                    }
+                    else {
+                        var order = document.createTextNode("Romance, Lex Luther, Spicy");
+                        changeQuestion.appendChild(order);
+                    }
+                }
+            }
+        };
     }
 ]);
 
@@ -159,7 +423,7 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase',//this is the controller for the ticket purchase page html
     function ($scope, $rootScope, $location, Purchase) {
         console.log("this controller");
-        
+
         $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({
@@ -170,8 +434,8 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
             }, function (status, response) {
                 if (response.error) {
                     console.log(response.error);
-                    $scope.$apply(function(){
-                        $scope.purchaseError= true;
+                    $scope.$apply(function () {
+                        $scope.purchaseError = true;
                     })
                 } else {
                     var stripeToken = response.id;
