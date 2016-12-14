@@ -56,7 +56,9 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this i
 
 app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the menu page html
     function ($scope, $rootScope, $location) {
+        console.log('this controller');
         var btn = document.createElement('button');
+        document.body.appendChild(btn);
         var clickText = document.createTextNode("Can't Decide?");
         var whichBox = document.getElementsByClassName("dices");
         var bod = document.getElementsByTagName("body");
@@ -74,6 +76,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         var firstButton = document.createElement('div')
         document.body.appendChild(firstButton);
         firstButton.appendChild(btn);
+
 
         var questionDiv = document.createElement('div');
         questionDiv.setAttribute("id", "questionText");
