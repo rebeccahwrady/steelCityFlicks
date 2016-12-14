@@ -232,8 +232,14 @@ a.link {
   padding-top: 10em;
 }
 #select-tickets {
+  font-family: "Rye", cursive, Arial, sans-serif;
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+#select-tickets legend {
+  margin-left: 0.75em;
 }
 #select-tickets .glyphicon {
   font-size: 0.75em;
