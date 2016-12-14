@@ -5,11 +5,15 @@
 
 
     .theater-hero {
-        background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
-        height: 35em;
+        background-image: url('../resources/theater-events.jpg');
         background-repeat: no-repeat;
-        width: 100%;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
+        height: 35em;
     }
 }
 
@@ -30,12 +34,19 @@
         font-family: @heroFont;
     }
 
+
     .panel-default {
         margin-left: 3em;
         margin-right: 3em;
+        height: 26em;
+      
 
          .panel-body {
-            height: 13em;
+            background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        
             
 
             h1, h3, p, h6, button  {
