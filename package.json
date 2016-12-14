@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon -e js,less --exec \"source server/.variables && lessc client/css/styles.less client/css/styles.css && node server/server.js\"",
     "start": "node server/server.js"
   },
   "author": "Platypi",
   "license": "MIT",
   "dependencies": {
-      "express": "latest",
-      "body-parser": "latest"
+    "body-parser": "latest",
+    "express": "latest",
+    "stripe": "^4.14.0"
   }
 }

@@ -77,13 +77,17 @@ a.link {
   left: 0;
   z-index: 15;
 }
-#form-container {
-  margin-top: 5em;
+.contactMapContainers {
+  margin-top: 8em;
+  margin-bottom: 8em;
 }
-#googleMap {
-  margin-top: 10em;
-  height: 20em;
-  border: 0.5em solid black;
+.contactMapContainers h4 {
+  text-align: center;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.contactMapContainers #googleMap {
+  height: 26em;
+  padding-left: -15px;
 }
 .blog-header {
   margin-bottom: 0;
@@ -234,10 +238,11 @@ a.link {
 }
 button {
   background-color: #650000;
-  color: #0f0606;
+  color: white;
   text-decoration: none;
   font-family: "Rye", cursive, Arial, sans-serif;
   letter-spacing: 0.2em;
+  padding: 0.2em;
 }
 /* FONTS */
 /* COLORS */
@@ -386,6 +391,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 13px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .navbar #words {
   font-family: "Cookie", cursive, Times, serif;
@@ -456,6 +463,7 @@ button {
   color: #650000;
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .footer .footer-li {
   font-size: 2em;

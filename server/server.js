@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var path = require('path');
 var crypto = require('crypto');
+var stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 var app = express();
 app
@@ -17,6 +18,24 @@ app.route('/api/posts/:id')
     .get(read)
     .put(update)
     .delete(del);
+
+app.route('/api/purchases')
+    .post(function(req, res, next) {
+         stripe.charges.create({
+             amount: req.body.amountToCharge,
+             currency: 'usd',
+             source: req.body.token,
+             description: 'ticket purchase'
+        })
+        .then (function(success) {
+            console.log(success);
+            res.sendStatus(201);
+            //success.id
+        }, function(err) {
+            console.log(err);
+            res.sendStatus(500);
+        })
+    })
     
 app.use(handleError);
 
