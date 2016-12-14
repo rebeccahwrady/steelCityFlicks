@@ -21,7 +21,7 @@
   height: 100%;
   width: 100;
 }
-.pic-container {
+.main {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,6 +30,10 @@
   background-position: center;
   background-repeat: none;
   height: 100vh;
+}
+.container {
+  width: 100%;
+  padding: 0;
 }
 .box-container {
   height: 19em;
@@ -429,8 +433,6 @@ button {
 }
 .footer {
   background-color: #0f0606;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 .footer .footer-logo {
   height: 7em;
