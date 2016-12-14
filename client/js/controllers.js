@@ -188,8 +188,6 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
                 }
             });
         };
-
-        console.log()
     }]);
 
 
