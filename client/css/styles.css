@@ -91,7 +91,7 @@ a.link {
   margin-right: -15px;
 }
 .blog-header .theater-hero {
-  background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
+  background-image: url('../resources/theater-events.jpg');
   height: 35em;
   background-repeat: no-repeat;
   width: 100%;
@@ -116,7 +116,14 @@ a.link {
   margin-right: 3em;
 }
 .blog-area .panel-default .panel-body {
-  height: 13em;
+  height: 26em;
+}
+.blog-area .panel-default .panel-body .blog-background {
+  background-image: url('https://image.freepik.com/free-vector/movie-theater-red-seats-and-cimena-screen_23-2147494044.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 .blog-area .panel-default .panel-body h1,
 .blog-area .panel-default .panel-body h3,
@@ -239,7 +246,7 @@ button {
   margin-right: -15px;
 }
 .container-fluid .curtain {
-  background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
+  background-image: url('../resources/red-curtain.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -13px;
@@ -291,7 +298,7 @@ button {
 .editpost {
   height: 40em;
   padding-top: 20em;
-  background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
+  background-image: url('../resources/red-curtain.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -13px;
