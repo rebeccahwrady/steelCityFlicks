@@ -247,6 +247,9 @@ button {
 }
 /* FONTS */
 /* COLORS */
+.row {
+  overflow: hidden;
+}
 .container-fluid {
   margin-left: -15px;
   margin-right: -15px;
@@ -271,6 +274,7 @@ button {
 .container-fluid .curtain .blog-stuff .singlepost h3,
 .container-fluid .curtain .blog-stuff .singlepost h4 {
   font-family: "Rye", cursive, Arial, sans-serif;
+  word-wrap: break-word;
 }
 .container-fluid .curtain .blog-stuff .button-container {
   text-align: center;
