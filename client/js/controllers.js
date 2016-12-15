@@ -26,7 +26,8 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this i
             divNode = $('#googleMap').get(0);
             var map = new google.maps.Map(divNode, {
                 zoom: 16,
-                center: coordinates
+                center: coordinates,
+                scrollwheel: false
             });
             var marker = new google.maps.Marker({
                 position: coordinates,
