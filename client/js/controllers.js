@@ -51,8 +51,10 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
             newContact.$save(function(){
                 console.log("Email sent!")
                 console.log(newContact);
-            })
-        }
+            }, function(err){
+                console.log(err);
+            });
+        };
     }
 ]);
 
