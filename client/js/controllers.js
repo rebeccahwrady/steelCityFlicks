@@ -19,8 +19,8 @@ app.controller('myHomePageCtrl', ['$scope', '$rootScope', '$location', //this is
     }
 ]);
 
-app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the about page html
-    function ($scope, $rootScope, $location) {
+app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact', //this is the controller for the about page html
+    function ($scope, $rootScope, $location, Contact) {
         window.initMap = function () {
             var coordinates = { lat: 33.511920, lng: -86.812562 };
             divNode = $('#googleMap').get(0);
@@ -34,24 +34,25 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', //this i
                 map: map
             });
         }
-        // $scope.result = "hidden";
-        // $scope.resultMessage = "message";
-        // $scope.contactData;
-        // $scope.submitButtonDisabled = false;
-        // $scope.submitted = false;
-
-        // $scope.submit = function(contactForm){
-        //     console.log(contactForm);
-        //     $scope.submitted = true;
-        //     $scope.submitButtonDisabled = true;
-        //     if(contactForm.$valid){
-        //         $http({
-        //             method: 'POST',
-        //             url: ''
-        //         })
-        // }
-        // }
-
+        $scope.contactData = {
+          fullname: '',
+          email: '',
+          subject: '',
+          message: ''  
+        };
+        $scope.sendEmail = function(){
+            var contact = {
+                fullname: $scope.contactData.fullname,
+                email: $scope.contactData.email,
+                subject: $scope.contactData.subject,
+                message: $scope.contactData.message
+            }
+            var newContact = new Contact(contact);
+            newContact.$save(function(){
+                console.log("Email sent!")
+                console.log(newContact);
+            })
+        }
     }
 ]);
 

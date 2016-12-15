@@ -83,8 +83,9 @@ a.link {
   z-index: 15;
 }
 .contactMapContainers {
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  padding-left: 1.75em;
 }
 .contactMapContainers h4 {
   text-align: center;
@@ -92,7 +93,6 @@ a.link {
 }
 .contactMapContainers #googleMap {
   height: 26em;
-  padding-left: -15px;
 }
 .blog-header {
   margin-bottom: 0;
