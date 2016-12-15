@@ -20,6 +20,19 @@
     color: white;
 }
 
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+
+[class*='col-']  > [class*='words'] {
+  display: flex;
+  flex-direction: column;
+}
+
 .black{
     background-color: black;
 }
