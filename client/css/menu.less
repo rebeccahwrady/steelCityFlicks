@@ -2,16 +2,15 @@
 
 .menu-header {
     padding-bottom: 15px;
-    margin-left: -15px;
-    margin-right: -15px;
     margin-top: 0;
 
-    .theater-hero {
+    .theater-heroMenu {
         background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
         height: 35em;
         background-repeat: no-repeat;
         width: 100%;
         background-size: cover;
+        margin-bottom: 0px;
     }
 }
 
@@ -20,21 +19,24 @@
     color: white;
 }
 
-.row {
+.panel{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
-[class*='col-']  > [class*='words'] {
+.panel > [class*='words'] {
   display: flex;
   flex-direction: column;
 }
 
 .black{
     background-color: black;
+}
+#menuCont{
+    padding-right: 0px;
 }
 .words{
     padding-top: 0px;
@@ -71,4 +73,17 @@
     /* height: auto; */
     display: none;
     }
+}
+
+.col-md-3{
+    padding-right: 0px;
+}
+
+.col-md-4{
+    padding-right: 0px;
+}
+
+.menuButton{
+    height: 30px;
+    width: 50px;
 }

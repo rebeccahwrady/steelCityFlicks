@@ -58,10 +58,9 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
     function ($scope, $rootScope, $location) {
         console.log('this controller');
         var btn = document.createElement('button');
-        document.body.appendChild(btn);
+        btn.setAttribute("class", "menuButton");
         var clickText = document.createTextNode("Can't Decide?");
-        var whichBox = document.getElementsByClassName("dices");
-        var bod = document.getElementsByTagName("body");
+        var heroWords = document.getElementsByClassName("heroWords");
 
         var answerArray = [];
         var genreArray = ["Action", "Comedy", "Romance"];
@@ -74,17 +73,17 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         btn.appendChild(clickText);
 
         var firstButton = document.createElement('div')
-        document.body.appendChild(firstButton);
         firstButton.appendChild(btn);
+        heroWords[0].appendChild(firstButton);
 
 
         var questionDiv = document.createElement('div');
         questionDiv.setAttribute("id", "questionText");
-        document.body.appendChild(questionDiv);
+        heroWords[0].appendChild(questionDiv);
 
         var answerDiv = document.createElement('div');
         answerDiv.setAttribute("class", "diceDivClass");
-        document.body.appendChild(answerDiv);
+        heroWords[0].appendChild(answerDiv);
 
         btn.addEventListener('click', selectGenre);
 
@@ -93,7 +92,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectGenre() {
-            document.body.removeChild(firstButton);
+            heroWords[0].removeChild(firstButton);
 
             var question = document.createTextNode("Please Select a Movie Genre");
             questionDiv.appendChild(question);
