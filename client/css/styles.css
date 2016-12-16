@@ -124,38 +124,38 @@ a.link {
 .blog-area .title {
   font-family: "Rye", cursive, Arial, sans-serif;
 }
-.blog-area .panel-default {
+.blog-area .banana-default {
   margin-left: 3em;
   margin-right: 3em;
   height: 26em;
 }
-.blog-area .panel-default .panel-body {
+.blog-area .banana-default .banana-body {
   background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
-.blog-area .panel-default .panel-body h1,
-.blog-area .panel-default .panel-body h3,
-.blog-area .panel-default .panel-body p,
-.blog-area .panel-default .panel-body h6,
-.blog-area .panel-default .panel-body button {
+.blog-area .banana-default .banana-body h1,
+.blog-area .banana-default .banana-body h3,
+.blog-area .banana-default .banana-body p,
+.blog-area .banana-default .banana-body h6,
+.blog-area .banana-default .banana-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
 }
-.blog-area .panel-default .panel-body h3 {
+.blog-area .banana-default .banana-body h3 {
   color: #650000;
 }
-.blog-area .panel-default .panel-body h1,
-.blog-area .panel-default .panel-body p,
-.blog-area .panel-default .panel-body h6 {
+.blog-area .banana-default .banana-body h1,
+.blog-area .banana-default .banana-body p,
+.blog-area .banana-default .banana-body h6 {
   color: #0f0606;
 }
-.blog-area .panel-default .panel-body img {
+.blog-area .banana-default .banana-body img {
   height: 12em;
   width: 20em;
   margin-top: 1em;
 }
-.blog-area .panel-default .panel-body button {
+.blog-area .banana-default .banana-body button {
   color: white;
 }
 .menu-header {
