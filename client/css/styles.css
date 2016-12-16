@@ -45,9 +45,10 @@
 .box {
   width: 260px;
   height: flex;
-  margin: 20px;
   float: left;
   position: relative;
+  display: block;
+  margin: auto;
 }
 .box-content {
   display: block;
@@ -59,9 +60,11 @@
   -o-box-sizing: border-box;
 }
 .box-content img {
-  width: 100%;
-  height: 100%;
+  width: 12em;
+  height: 12em;
   background-color: white;
+  display: block;
+  margin: auto;
 }
 .box-overlay {
   position: absolute;
@@ -163,6 +166,7 @@ a.link {
 .menu-header {
   padding-bottom: 15px;
   margin-top: 0;
+  width: 100%;
 }
 .menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
@@ -176,14 +180,29 @@ a.link {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
 }
+.equal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+div[class*='col-'] {
+  flex: 1 1 auto;
+  display: flex;
+}
 .panel {
+  flex: 1 0 100%;
+}
+.row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
-.panel > [class*='words'] {
+.row > [class*='words'] {
   display: flex;
   flex-direction: column;
 }
@@ -195,6 +214,8 @@ a.link {
 }
 .words {
   padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .descrip {
   font-style: italic;
@@ -235,13 +256,20 @@ a.link {
 }
 .col-md-3 {
   padding-right: 0px;
+  padding-left: 15px;
+  margin-left: 15px;
 }
 .col-md-4 {
   padding-right: 0px;
+  padding-left: 15px;
+  margin-left: 15px;
 }
 .menuButton {
   height: 30px;
   width: 50px;
+}
+.menu-area {
+  width: 100%;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
@@ -376,8 +404,8 @@ button {
   li {
     display: block;
   }
-  .image1 {
-    display: none;
+  .navbar-brand {
+    font-family: "Rye", cursive, Arial, sans-serif;
   }
   .navbar {
     background-image: url('../images/Home/coversharks-home-mobile-hero.png');
@@ -430,7 +458,7 @@ button {
   height: 4.9em;
   float: left;
 }
-.navbar .title {
+.navbar .nav-title {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: #650000;
   font-size: 3em;
