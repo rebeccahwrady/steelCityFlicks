@@ -83,16 +83,16 @@ a.link {
   z-index: 15;
 }
 .contactMapContainers {
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  padding-left: 1.75em;
 }
 .contactMapContainers h4 {
   text-align: center;
   font-family: "Rye", cursive, Arial, sans-serif;
 }
 .contactMapContainers #googleMap {
-  height: 26em;
-  padding-left: -15px;
+  height: 30em;
 }
 .blog-header {
   margin-bottom: 0;
@@ -227,20 +227,24 @@ a.link {
 #theater-seats h1 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
+  text-align: center;
 }
 #theater-seats .h1Container {
   padding-top: 10em;
 }
 #select-tickets {
+  font-family: "Rye", cursive, Arial, sans-serif;
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+#select-tickets legend {
+  margin-left: 0.75em;
 }
 #select-tickets .glyphicon {
   font-size: 0.75em;
   color: red;
-}
-.small-input-container {
-  padding-left: 0;
 }
 button {
   background-color: #650000;
