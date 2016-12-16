@@ -263,13 +263,31 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 90vh;
 }
 .container-fluid .curtain .blog-stuff {
   height: 20em;
   margin: 0 auto;
+  padding-top: 10em;
+}
+@media screen and (max-width: 860px) {
+  .container-fluid .curtain .blog-stuff {
+    padding-top: 12em;
+  }
 }
 .container-fluid .curtain .blog-stuff .singlepost {
   text-align: center;
+}
+.container-fluid .curtain .blog-stuff .singlepost .content-div {
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: red;
+}
+@media screen and (max-width: 700px) {
+  .container-fluid .curtain .blog-stuff .singlepost .content-div {
+    width: 20em;
+  }
 }
 .container-fluid .curtain .blog-stuff .singlepost h1,
 .container-fluid .curtain .blog-stuff .singlepost h2,
