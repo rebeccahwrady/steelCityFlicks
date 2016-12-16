@@ -19,7 +19,7 @@
 }
 .navIcon .boxOverlay {
   height: 100%;
-  width: 100;
+  width: 100%;
 }
 .main {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
@@ -37,8 +37,10 @@
 }
 .box-container {
   height: 19em;
-  width: 100vw;
+  width: 100%;
   background-color: #0f0606;
+  margin-right: 0;
+  margin-left: 0;
 }
 .box {
   width: 260px;
