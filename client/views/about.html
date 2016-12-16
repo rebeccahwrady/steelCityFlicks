@@ -28,11 +28,11 @@
                 <!--MESSAGE-->
                 <div class="form-group">
                     <label for="contactMessage">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" data-ng-model="contactData.content" required></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" ng-model="contactData.content" required></textarea>
                 </div>
                 <!--SEND BUTTON-->
                 <div class="form-group">
-                    <button class="btn btn-lg" data-ng-disabled="sendButtonDisabled" ng-click="sendEmail()">Send!</button>
+                    <button class="btn btn-lg" ng-disabled="sendButtonDisabled" ng-click="sendEmail()">Send!</button>
                 </div>
             </form>
         </div>
