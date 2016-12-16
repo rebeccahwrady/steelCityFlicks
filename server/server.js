@@ -4,8 +4,12 @@ var fs = require('fs');
 var path = require('path');
 var crypto = require('crypto');
 var stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// var sg = require('sendgrid')(process.env.SENDGRID_KEY);
 
+
+var emailSvc = require('./services/email.svc.js');
 var app = express();
+
 app
     .use(express.static('client'))
     .use(bodyParser.json());
@@ -35,7 +39,20 @@ app.route('/api/purchases')
             console.log(err);
             res.sendStatus(500);
         })
-    })
+    });
+
+app.route('/api/contact')
+    .post(function(req,res,next) {
+        emailSvc.sendEmail('mdpasker@gmail.com', req.body.fullname, req.body.fromEmail, req.body.subject, req.body.content)
+            .then(function(success) {
+                console.log(success);
+                console.log('check');
+                res.send('email sent!');
+            }, function(err) {
+                console.log(err);
+                res.sendStatus(500);
+            });
+    });
     
 app.use(handleError);
 
@@ -43,6 +60,8 @@ app.use(handleError);
 
 app.listen(3000);
 console.log('Server listening on port 3000');
+
+
 
 function sendResponse(res, data) {
     var statusCode = 200
@@ -225,3 +244,4 @@ function create(req, res, next) {
         }
     });
 }
+

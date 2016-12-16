@@ -8,4 +8,8 @@ angular.module('myFlicks.factories', [])
 
     .factory('Purchase', ['$resource', function($resource) {
         return $resource('api/purchases/:id')
+    }])
+
+    .factory('Contact', ['$resource', function($resource){
+        return $resource('api/contact/:id')
     }]);
