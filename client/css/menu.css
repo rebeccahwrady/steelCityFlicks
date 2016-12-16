@@ -2,26 +2,59 @@
 /* COLORS */
 .menu-header {
   padding-bottom: 15px;
-  margin-left: -15px;
-  margin-right: -15px;
   margin-top: 0;
+  max-width: 100%;
 }
-.menu-header .theater-hero {
+.menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
   height: 35em;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
+  margin-bottom: 0px;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
 }
+.equal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+div[class*='columnsMenu'] {
+  flex: 1 1 auto;
+  display: flex;
+}
+.here {
+  flex: 1 0 100%;
+  margin-left: 15px;
+}
+.mine {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.mine > [class*='words'] {
+  display: flex;
+  flex-direction: column;
+}
 .black {
   background-color: black;
 }
+#menuCont {
+  padding-right: 0px;
+  width: 100%;
+}
 .words {
   padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .descrip {
   font-style: italic;
@@ -48,7 +81,7 @@
   /* vertical alignment of the inline element */
   height: 100%;
 }
-.vertical-center > .container {
+.vertical-center > .food-container {
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -59,4 +92,11 @@
     /* height: auto; */
     display: none;
   }
+}
+.menuButton {
+  height: 30px;
+  width: 50px;
+}
+.menu-area {
+  width: 100%;
 }
