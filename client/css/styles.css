@@ -19,21 +19,28 @@
 }
 .navIcon .boxOverlay {
   height: 100%;
-  width: 100;
+  width: 100%;
 }
 .main {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+}
+.container {
+  width: 100%;
+  padding: 0;
 }
 .box-container {
   height: 19em;
-  width: 100vw;
+  width: 100%;
   background-color: #0f0606;
+  margin-right: 0;
+  margin-left: 0;
 }
 .box {
   width: 260px;
@@ -77,13 +84,17 @@ a.link {
   left: 0;
   z-index: 15;
 }
-#form-container {
-  margin-top: 5em;
+.contactMapContainers {
+  margin-top: 6em;
+  margin-bottom: 6em;
+  padding-left: 1.75em;
 }
-#googleMap {
-  margin-top: 10em;
-  height: 20em;
-  border: 0.5em solid black;
+.contactMapContainers h4 {
+  text-align: center;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.contactMapContainers #googleMap {
+  height: 26em;
 }
 .blog-header {
   margin-bottom: 0;
@@ -91,19 +102,26 @@ a.link {
   margin-right: -15px;
 }
 .blog-header .theater-hero {
-  background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
-  height: 35em;
+  background-image: url('../resources/theater-events.jpg');
   background-repeat: no-repeat;
-  width: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  height: 35em;
 }
-.blog-area h2 {
-  text-align: center;
-  color: #650000;
+.blog-area {
+  background-color: white;
 }
 .blog-area h1 {
   text-align: center;
   color: #0f0606;
+}
+.blog-area h2 {
+  color: #650000;
+  text-align: center;
 }
 .blog-area .title {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -111,9 +129,13 @@ a.link {
 .blog-area .panel-default {
   margin-left: 3em;
   margin-right: 3em;
+  height: 26em;
 }
 .blog-area .panel-default .panel-body {
-  height: 13em;
+  background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 .blog-area .panel-default .panel-body h1,
 .blog-area .panel-default .panel-body h3,
@@ -122,30 +144,54 @@ a.link {
 .blog-area .panel-default .panel-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
 }
+.blog-area .panel-default .panel-body h3 {
+  color: #650000;
+}
+.blog-area .panel-default .panel-body h1,
+.blog-area .panel-default .panel-body p,
+.blog-area .panel-default .panel-body h6 {
+  color: #0f0606;
+}
 .blog-area .panel-default .panel-body img {
   height: 12em;
   width: 20em;
   margin-top: 1em;
 }
+.blog-area .panel-default .panel-body button {
+  color: white;
+}
 .menu-header {
   padding-bottom: 15px;
-  margin-left: -15px;
-  margin-right: -15px;
   margin-top: 0;
 }
-.menu-header .theater-hero {
+.menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
   height: 35em;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
+  margin-bottom: 0px;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
 }
+.panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.panel > [class*='words'] {
+  display: flex;
+  flex-direction: column;
+}
 .black {
   background-color: black;
+}
+#menuCont {
+  padding-right: 0px;
 }
 .words {
   padding-top: 0px;
@@ -156,7 +202,7 @@ a.link {
 .title {
   font-size: 25px;
 }
-.container {
+.food-container {
   width: 1025px;
 }
 .vertical-center {
@@ -175,7 +221,7 @@ a.link {
   /* vertical alignment of the inline element */
   height: 100%;
 }
-.vertical-center > .container {
+.vertical-center > .food-container {
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -187,6 +233,16 @@ a.link {
     display: none;
   }
 }
+.col-md-3 {
+  padding-right: 0px;
+}
+.col-md-4 {
+  padding-right: 0px;
+}
+.menuButton {
+  height: 30px;
+  width: 50px;
+}
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
   background-size: cover;
@@ -196,54 +252,125 @@ a.link {
 #theater-seats h1 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
+  text-align: center;
 }
 #theater-seats .h1Container {
   padding-top: 10em;
 }
 #select-tickets {
+  font-family: "Rye", cursive, Arial, sans-serif;
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+#select-tickets legend {
+  margin-left: 0.75em;
 }
 #select-tickets .glyphicon {
   font-size: 0.75em;
   color: red;
 }
-.small-input-container {
-  padding-left: 0;
-}
 button {
   background-color: #650000;
-  color: #0f0606;
+  color: white;
   text-decoration: none;
   font-family: "Rye", cursive, Arial, sans-serif;
   letter-spacing: 0.2em;
+  padding: 0.2em;
 }
 /* FONTS */
 /* COLORS */
+.row {
+  overflow: hidden;
+}
 .container-fluid {
   margin-left: -15px;
   margin-right: -15px;
 }
 .container-fluid .curtain {
+  background-image: url('../resources/red-curtain.jpg');
+  margin-left: -13px;
+  margin-right: -13px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container-fluid .curtain .blog-stuff {
+  height: 20em;
+  margin: 0 auto;
+}
+.container-fluid .curtain .blog-stuff .singlepost {
+  text-align: center;
+}
+.container-fluid .curtain .blog-stuff .singlepost h1,
+.container-fluid .curtain .blog-stuff .singlepost h2,
+.container-fluid .curtain .blog-stuff .singlepost h3,
+.container-fluid .curtain .blog-stuff .singlepost h4 {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  word-wrap: break-word;
+}
+.container-fluid .curtain .blog-stuff .button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.container-fluid .curtain .blog-stuff .button-container button {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  color: white;
+}
+.newpost {
+  height: 40em;
+  padding-top: 20em;
   background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -13px;
   margin-right: -13px;
+}
+.newpost input,
+.newpost button,
+.newpost textarea {
+  display: block;
+  margin: 0 auto;
+}
+.newpost .smallbox {
+  width: 20em;
+  height: 2em;
+}
+.newpost .largebox {
+  width: 20em;
+  height: 10em;
+}
+.newpost button {
+  color: white;
+}
+.editpost {
   height: 40em;
+  padding-top: 20em;
+  background-image: url('../resources/red-curtain.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.container-fluid .curtain .singlepost {
-  text-align: center;
-  margin-top: 20em;
+.editpost input,
+.editpost button,
+.editpost textarea {
+  display: block;
+  margin: 0 auto;
 }
-.container-fluid .curtain .singlepost h1,
-.container-fluid .curtain .singlepost h2,
-.container-fluid .curtain .singlepost h3,
-.container-fluid .curtain .singlepost h4 {
-  font-family: "Rye", cursive, Arial, sans-serif;
+.editpost .smallerbox {
+  width: 20em;
+  height: 2em;
 }
-.container-fluid .curtain button {
-  font-family: "Rye", cursive, Arial, sans-serif;
+.editpost .largerbox {
+  width: 20em;
+  height: 10em;
+}
+.editpost button {
+  color: white;
 }
 @media screen and (max-width: 575px) {
   li {
@@ -310,11 +437,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 13px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-.navbar .words {
+.navbar #words {
   font-family: "Cookie", cursive, Times, serif;
   font-weight: 600;
-  margin-top: 0.5em;
+  padding-top: 500px;
   color: #650000;
   font-size: 1.25em;
 }
@@ -352,8 +481,6 @@ button {
 }
 .footer {
   background-color: #0f0606;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 .footer .footer-logo {
   height: 7em;
@@ -380,6 +507,7 @@ button {
   color: #650000;
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .footer .footer-li {
   font-size: 2em;
@@ -395,11 +523,17 @@ button {
   font-weight: 400;
   margin-left: 5em;
   background-image: url('../resources/envelope.svg');
+  outline: none;
 }
-.footer .btn:focus,
-.footer .btn:active:focus,
-.footer .btn.active:focus {
-  outline: 0 none;
+.footer .btn-primary:hover,
+.footer .btn-primary:focus,
+.footer .btn-primary:active,
+.footer .btn-primary.active,
+.footer .open > .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #650000;
+  border-color: #F29C1F;
+  /*set the color you want here*/
 }
 .footer .final {
   background-color: #0f0606;

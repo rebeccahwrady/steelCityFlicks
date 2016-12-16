@@ -22,34 +22,38 @@
     text-align: center;
 }
 
-// .text {
-//     color: white;
-//     text-shadow:
-//     -1px -1px 0 #000,
-//     1px -1px 0 #000,
-//     -1px 1px 0 #000,
-//     1px 1px 0 #000;
-//     font-size: 1.25em;
-// }
 .navIcon .boxOverlay{
     height: 100%;
-    width: 100;
+    width: 100%;	
 }
 
 .main{
     background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	height: 100vh;
+    // width: 100vw;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
 }
 
 .box-container{
 	height: 19em;
-	width: 100vw;
+	width: 100%;
 	background-color: @black;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .box {
@@ -58,6 +62,7 @@
 	margin:20px;
 	float:left;
 	position: relative;
+	
 }
 // .box-content is what's revealed when the cover image moves away
 .box-content {

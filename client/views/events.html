@@ -14,22 +14,25 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row equal">
 			<div class="col-md-4 blogposts" ng-repeat="blog in blogposts">
 				<div class="panel panel-default">
 					<div class="panel-body">
+						<div class="blog-background">
 						<h1> {{ blog.title }}</h1>
 						<h3> {{ blog.author }}</h3>
-					</div>
-					<div class="panel-body">
+					<!--</div>
+					<div class="panel-body">-->
 						<p> {{ blog.content }}</p>
 						<h6> {{ blog.createdAt | date: 'short' }}</h6>
 						<button ng-click="goToSinglePost(blog.id)">Read More</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 	<!--container closing-->
 	</div>

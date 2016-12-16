@@ -8,6 +8,8 @@
 @import "../css/tickets.less";
 @import "../css/variables.less";
 @import "../css/singlepost.less";
+@import "../css/newpost.less";
+@import "../css/editpost.less";
 
 @media screen and (max-width: 575px){
     li {
@@ -93,15 +95,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 13px;
+        text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
         
     }
 
-    .words {
+    #words {
         font-family: @headerFont;
         font-weight: 600;
-        margin-top: 0.5em;
+        padding-top: 500px;
         color: @mainRed;
         font-size: 1.25em;
+        
     }
 
     img {
@@ -147,8 +156,8 @@
 
 .footer {
     background-color: @black;
-    margin-right: -15px;
-    margin-left: -15px;
+    // margin-right: -15px;
+    // margin-left: -15px;
 
     .footer-logo {
         height: 7em;
@@ -178,6 +187,11 @@
             color: @mainRed;
             font-family: @heroFont;
             font-weight: 600;
+            text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
          }
     }
 
@@ -185,6 +199,7 @@
              font-size: 2em;
              color: @mainRed;
              font-family: @heroFont;
+             
     }
 
     button {
@@ -196,11 +211,14 @@
         font-weight: 400;
         margin-left: 5em;
         background-image: url('../resources/envelope.svg');
+        outline: none;
     }
    
-   .btn:focus, .btn:active:focus, .btn.active:focus {
-        outline: 0 none;
-    }
+   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: white;
+    background-color: @mainRed;
+    border-color: @gold; /*set the color you want here*/
+}
 
     .final {
         background-color: @black;
@@ -208,5 +226,6 @@
     }
 }
 
+   
 
 
