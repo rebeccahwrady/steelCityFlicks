@@ -92,12 +92,6 @@ div[class*='col-'] {
     display: none;
   }
 }
-.col-md-3 {
-  padding-right: 0px;
-}
-.col-md-4 {
-  padding-right: 0px;
-}
 .menuButton {
   height: 30px;
   width: 50px;
