@@ -1,5 +1,7 @@
 
-
+.row {
+    overflow: hidden;
+}
 .container-fluid {
     margin-left: -15px;
     margin-right: -15px;
@@ -12,21 +14,31 @@
         background-size: cover;
         background-position: center;
 
+
         .blog-stuff {
             height: 20em;
             margin: 0 auto;
+            // background-color: red;
 
            .singlepost {
             text-align: center;
+            // padding-left: 20em;
+            // padding-right: 20em;
+            // background-color: blue;
 
             h1, h2, h3, h4 {
                     font-family: @heroFont;
+                    word-wrap: break-word;
+                    
+                    // background-color: green;
                 }
+
             }
 
             .button-container {
                 text-align: center;
                 margin-top: 10px;
+                // background-color: yellow;
 
                 button {
                     font-family: @heroFont;
@@ -36,4 +48,17 @@
         }
     }
 }
+
+// @media screen and (max-width: 596px) {
+//     .container-fluid {
+//         .curtain {
+//             .blog-stuff {
+//                 .singlepost {
+//                     padding-left: 0em;
+//                     padding-right: 0em;
+//                 }
+//             }
+//         }
+//     }
+// }
 
