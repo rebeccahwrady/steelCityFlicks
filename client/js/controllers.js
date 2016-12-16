@@ -36,16 +36,16 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
         }
         $scope.contactData = {
           fullname: '',
-          email: '',
+          fromEmail: '',
           subject: '',
-          message: ''  
+          content: ''  
         };
         $scope.sendEmail = function(){
             var contact = {
                 fullname: $scope.contactData.fullname,
-                email: $scope.contactData.email,
+                fromEmail: $scope.contactData.fromEmail,
                 subject: $scope.contactData.subject,
-                message: $scope.contactData.message
+                content: $scope.contactData.content
             }
             var newContact = new Contact(contact);
             newContact.$save(function(){
