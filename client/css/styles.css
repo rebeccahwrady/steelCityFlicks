@@ -182,7 +182,7 @@ a.link {
   display: -webkit-flex;
   display: flex;
 }
-div[class*='col-'] {
+div[class*='columnsMenu'] {
   flex: 1 1 auto;
   display: flex;
 }
