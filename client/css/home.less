@@ -22,20 +22,9 @@
     text-align: center;
 }
 
-// .text {
-//     color: white;
-//     text-shadow:
-//     -1px -1px 0 #000,
-//     1px -1px 0 #000,
-//     -1px 1px 0 #000,
-//     1px 1px 0 #000;
-//     font-size: 1.25em;
-// }
-
 .navIcon .boxOverlay{
     height: 100%;
-    width: 100;
-	
+    width: 100%;	
 }
 
 .main{
@@ -61,16 +50,19 @@
 
 .box-container{
 	height: 19em;
-	width: 100vw;
+	width: 100%;
 	background-color: @black;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .box {
 	width:260px;
 	height:flex;
-	margin:20px;
 	float:left;
 	position: relative;
+	display: block;
+	margin: auto;
 	
 }
 // .box-content is what's revealed when the cover image moves away
@@ -83,9 +75,11 @@
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 		img {
-			width: 100%;
-			height: 100%;
+			width: 12em;
+			height: 12em;
 			background-color: white;
+			display: block;
+			margin: auto;
 		}
 }
 

@@ -3,3 +3,4 @@ node_modules/
 server/.variables
 
 .DS_Store
+client/.DS_Store

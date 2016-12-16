@@ -2,13 +2,13 @@
     <div class="jumbotron" id="theater-seats">
         <div class="container">
             <div class="row">
-                <div class="text-center h1Container">
-                <h1>Purchase Your Tickets</h1>
+                <div class=" col-md-12 h1Container">
+                    <h1>Purchase Your Tickets</h1>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container" id="form-container">
+    <div class="container-fluic" id="form-container">
     <!--Begin Select Tickets Form-->
         <form class="form-horizontal" id="select-tickets">
             <fieldset class="form-group">
@@ -100,12 +100,12 @@
         </div>
             <div class="form-group">
                 <label class="col-md-2 col-form-label" for="cvc">Security Code/CVC</label>
-                <div class="col-md-8">
+                <!--<div class="col-md-8">-->
                     <div class="col-md-4 small-input-container">
                         <input type="number" class="form-control" id="cvc" ng-model="cvc">
                     </div>
-                </div>
             </div>
+            <!--</div>-->
             <div id="purchaseAmount">
                 <h4>Your Credit Card will be charged {{ticketAmount * 8 | currency}}</h4>
             </div>

@@ -19,7 +19,7 @@
 }
 .navIcon .boxOverlay {
   height: 100%;
-  width: 100;
+  width: 100%;
 }
 .main {
   background-image: url("http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg");
@@ -37,15 +37,18 @@
 }
 .box-container {
   height: 19em;
-  width: 100vw;
+  width: 100%;
   background-color: #0f0606;
+  margin-right: 0;
+  margin-left: 0;
 }
 .box {
   width: 260px;
   height: flex;
-  margin: 20px;
   float: left;
   position: relative;
+  display: block;
+  margin: auto;
 }
 .box-content {
   display: block;
@@ -57,9 +60,11 @@
   -o-box-sizing: border-box;
 }
 .box-content img {
-  width: 100%;
-  height: 100%;
+  width: 12em;
+  height: 12em;
   background-color: white;
+  display: block;
+  margin: auto;
 }
 .box-overlay {
   position: absolute;
@@ -83,8 +88,9 @@ a.link {
   z-index: 15;
 }
 .contactMapContainers {
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  padding-left: 1.75em;
 }
 .contactMapContainers h4 {
   text-align: center;
@@ -92,7 +98,6 @@ a.link {
 }
 .contactMapContainers #googleMap {
   height: 26em;
-  padding-left: -15px;
 }
 .blog-header {
   margin-bottom: 0;
@@ -160,23 +165,36 @@ a.link {
 }
 .menu-header {
   padding-bottom: 15px;
-  margin-left: -15px;
-  margin-right: -15px;
   margin-top: 0;
 }
-.menu-header .theater-hero {
+.menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
   height: 35em;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
+  margin-bottom: 0px;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
 }
+.panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.panel > [class*='words'] {
+  display: flex;
+  flex-direction: column;
+}
 .black {
   background-color: black;
+}
+#menuCont {
+  padding-right: 0px;
 }
 .words {
   padding-top: 0px;
@@ -218,6 +236,16 @@ a.link {
     display: none;
   }
 }
+.col-md-3 {
+  padding-right: 0px;
+}
+.col-md-4 {
+  padding-right: 0px;
+}
+.menuButton {
+  height: 30px;
+  width: 50px;
+}
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
   background-size: cover;
@@ -227,6 +255,7 @@ a.link {
 #theater-seats h1 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
+  text-align: center;
 }
 #theater-seats .h1Container {
   padding-top: 10em;
@@ -245,9 +274,6 @@ a.link {
   font-size: 0.75em;
   color: red;
 }
-.small-input-container {
-  padding-left: 0;
-}
 button {
   background-color: #650000;
   color: white;
@@ -258,6 +284,9 @@ button {
 }
 /* FONTS */
 /* COLORS */
+.row {
+  overflow: hidden;
+}
 .container-fluid {
   margin-left: -15px;
   margin-right: -15px;
@@ -282,6 +311,7 @@ button {
 .container-fluid .curtain .blog-stuff .singlepost h3,
 .container-fluid .curtain .blog-stuff .singlepost h4 {
   font-family: "Rye", cursive, Arial, sans-serif;
+  word-wrap: break-word;
 }
 .container-fluid .curtain .blog-stuff .button-container {
   text-align: center;
@@ -349,8 +379,8 @@ button {
   li {
     display: block;
   }
-  .image1 {
-    display: none;
+  .navbar-brand {
+    font-family: "Rye", cursive, Arial, sans-serif;
   }
   .navbar {
     background-image: url('../images/Home/coversharks-home-mobile-hero.png');
@@ -403,7 +433,7 @@ button {
   height: 4.9em;
   float: left;
 }
-.navbar .title {
+.navbar .nav-title {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: #650000;
   font-size: 3em;
