@@ -12,4 +12,8 @@ angular.module('myFlicks.factories', [])
 
     .factory('Contact', ['$resource', function($resource){
         return $resource('api/contact/:id')
+    }])
+
+    .factory('Movies', ['$resource', function($resource){
+        return $resource('api/movies/:id')
     }]);
