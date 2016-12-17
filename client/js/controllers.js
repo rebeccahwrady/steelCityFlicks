@@ -318,6 +318,10 @@ app.controller('myEventsPageCtrl', ['$scope', 'BlogpostFactory', '$location', //
         $scope.goToSinglePost = function (id) {
             $location.path('/events/' + id);
         }
+
+        $scope.goToNewPost = function () {
+            $location.path('/newpost');
+        }
     }
 ]);
 
@@ -368,6 +372,10 @@ app.controller('NewPostController', ['$scope', 'BlogpostFactory', '$location', f
             console.log(p);
         })
     }
+
+    $scope.backToEvents = function () {
+        $location.path('/events');
+    }
 }])
 
 app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams', '$location', function ($scope, BlogpostFactory, $routeParams, $location) {
@@ -384,6 +392,9 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
         })
     }
 
+    $scope.backToEvents = function () {
+        $location.path('/events');
+    }
 }])
 
 app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', 'MoviesFactory',//this is the controller for the ticket purchase page html
