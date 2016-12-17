@@ -98,7 +98,8 @@ div[class*='columnsMenu'] {
   height: 70px;
   line-height: 70px;
   width: 100px;
-  float: left;
+  padding: 1em;
+  display: inline;
   border-radius: 5px;
   margin: 5px;
   text-align: center;

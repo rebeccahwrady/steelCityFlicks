@@ -99,10 +99,9 @@ a.link {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25em;
+  height: 30em;
 }
 #aboutHero h1 {
-  padding-top: 0.75em;
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
   text-align: center;
@@ -290,7 +289,8 @@ div[class*='columnsMenu'] {
   height: 70px;
   line-height: 70px;
   width: 100px;
-  float: left;
+  padding: 1em;
+  display: inline;
   border-radius: 5px;
   margin: 5px;
   text-align: center;
@@ -321,7 +321,7 @@ div[class*='columnsMenu'] {
   color: white;
   text-align: center;
 }
-#theater-seats .h1Container {
+.h1Container {
   padding-top: 10em;
 }
 #select-tickets {
