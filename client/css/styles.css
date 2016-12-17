@@ -541,6 +541,7 @@ button {
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  margin-bottom: 0;
 }
 .footer .footer-li {
   font-size: 2em;
@@ -567,6 +568,9 @@ button {
   background-color: #650000;
   border-color: #F29C1F;
   /*set the color you want here*/
+}
+.footer .btn-primary {
+  border-color: transparent;
 }
 .footer .final {
   background-color: #0f0606;

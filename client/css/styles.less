@@ -192,6 +192,7 @@
             1px -1px 0 white,
             -1px 1px 0 white,
             1px 1px 0 white;
+            margin-bottom: 0;
          }
     }
 
@@ -217,8 +218,11 @@
    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: white;
     background-color: @mainRed;
-    border-color: @gold; /*set the color you want here*/
+    border-color: @gold; /*set the color you want here*/   
 }
+    .btn-primary {
+        border-color: transparent;
+    }
 
     .final {
         background-color: @black;
