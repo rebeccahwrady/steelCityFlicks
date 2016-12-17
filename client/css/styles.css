@@ -303,10 +303,10 @@ button {
 }
 /* FONTS */
 /* COLORS */
-.container-fluid {
+/*.container-fluid {
   margin-left: -15px;
   margin-right: -15px;
-}
+}*/
 .container-fluid .curtain {
   background-image: url('../resources/red-curtain.jpg');
   margin-left: -13px;

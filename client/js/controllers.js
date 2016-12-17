@@ -65,12 +65,12 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         var clickText = document.createTextNode("Can't Decide?");
         var heroWords = document.getElementsByClassName("heroWords");
 
-        // var answerArray = [];
-        // var genreArray = ["Action", "Comedy", "Romance"];
-        // var villainArray = ["The Joker", "Cruella de Vil", "Lex Luther"];
-        // var tasteArray = ["Sweet", "Savory", "Spicy"];
+        var answerArray = [];
+        var genreArray = ["Action", "Comedy", "Romance"];
+        var villainArray = ["The Joker", "Cruella de Vil", "Lex Luther"];
+        var tasteArray = ["Sweet", "Savory", "Spicy"];
 
-        // var val = 0;
+        var val = 0;
 
 
         btn.appendChild(clickText);
