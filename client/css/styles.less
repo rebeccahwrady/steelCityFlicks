@@ -41,19 +41,19 @@
         filter: blur(5px);
     }
 
-    .footer {
-    .footer-logos {
-        margin: 0 auto;
-        text-align: center;
-    }
+//     .footer {
+//     .footer-logos {
+//         margin: 0 auto;
+//         text-align: center;
+//     }
 
-    li {
-        text-align: center;
-    }
-    .final {
-        text-align: center;
-    }
-}
+//     li {
+//         text-align: center;
+//     }
+//     .final {
+//         text-align: center;
+//     }
+// }
 }
 
 
@@ -64,9 +64,8 @@
     }
 }
 
-
 .navbar {
-    height: 5em;
+    height: @navbar-height;
     margin-bottom: 0;
     background-color: @black;
 
@@ -145,79 +144,68 @@
 
 }
 
-.footer {
-    background-color: @black;
-
-    .footer-logo {
-        height: 7em;
-        width: 7em;
-        margin-top: 1em;
-    }
-
     .footer-fb {
-        height: 2em;
-        width: 2em;
-        margin-left: 1em;
-        margin-top: 0.5em;
+        height: 1.5em;
+        width: 1.5em;
+        
     }
 
     .footer-twitter {
-        height: 2em;
-        width: 2em;
-        margin-left: 1em;
-        margin-top: 0.5em;
+        height: 1.5em;
+        width: 1.5em;
+       
     }
 
-    ul {
-        list-style-type: none;
-        margin-top: 3em;
+//     ul {
+//         list-style-type: none;
+//         margin-top: 3em;
 
-        li {
-            color: @mainRed;
-            font-family: @heroFont;
-            font-weight: 600;
-            text-shadow:
-            -1px -1px 0 white,
-            1px -1px 0 white,
-            -1px 1px 0 white,
-            1px 1px 0 white;
-            margin-bottom: 0;
-         }
-    }
+//         li {
+//             color: @mainRed;
+//             font-family: @heroFont;
+//             font-weight: 600;
+//             text-shadow:
+//             -1px -1px 0 white,
+//             1px -1px 0 white,
+//             -1px 1px 0 white,
+//             1px 1px 0 white;
+//             margin-bottom: 0;
+//          }
+//     }
 
-    .footer-li {
-             font-size: 2em;
-             color: @mainRed;
-             font-family: @heroFont;
+//     .footer-li {
+//              font-size: 2em;
+//              color: @mainRed;
+//              font-family: @heroFont;
              
-    }
+//     }
 
-    button {
-        background-color: @gold;
-        margin-top: 1em;
-        height: 5em;
-        width: 5em;
-        font-family: @heroFont;
-        font-weight: 400;
-        margin-left: 5em;
-        background-image: url('../resources/envelope.svg');
-        outline: none;
-    }
+//     button {
+//         background-color: @gold;
+//         margin-top: 1em;
+//         height: 5em;
+//         width: 5em;
+//         font-family: @heroFont;
+//         font-weight: 400;
+//         margin-left: 5em;
+//         background-image: url('../resources/envelope.svg');
+//         outline: none;
+//     }
    
-   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: white;
-    background-color: @mainRed;
-    border-color: @gold; /*set the color you want here*/   
-}
-    .btn-primary {
-        border-color: transparent;
-    }
+//    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+//     color: white;
+//     background-color: @mainRed;
+//     border-color: @gold; /*set the color you want here*/   
+// }
+//     .btn-primary {
+//         border-color: transparent;
+//     }
 
-    .final {
-        background-color: @black;
-        margin: auto;
-    }
-}
+//     .final {
+//         background-color: @black;
+//         margin: auto;
+//     }
+// }
 
 #words {
         font-family: @headerFont;
@@ -236,6 +224,90 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+
+
+.footer-distributed{
+	background-color: @black;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+    padding: 0.5em 0;
+	text-align: center;
+	font: normal 16px sans-serif;
+    margin-top: 0;
+    font-family: @heroFont;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.footer-distributed .footer-left p{
+	color:  @mainRed;
+	font-size: 1em;
+	margin: 0 auto;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:2em;
+	font-weight: bold;
+	color:  @mainRed;
+	// margin-bottom: .5em;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+    overflow: hidden;
+    margin: 0 .5em;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	// margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}
+
    
 
 
