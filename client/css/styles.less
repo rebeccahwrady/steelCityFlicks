@@ -104,15 +104,6 @@
         
     }
 
-    #words {
-        font-family: @headerFont;
-        font-weight: 600;
-        padding-top: 500px;
-        color: @mainRed;
-        font-size: 1.25em;
-        
-    }
-
     img {
         height: 4em;
         width: 15em;
@@ -156,8 +147,6 @@
 
 .footer {
     background-color: @black;
-    // margin-right: -15px;
-    // margin-left: -15px;
 
     .footer-logo {
         height: 7em;
@@ -192,6 +181,7 @@
             1px -1px 0 white,
             -1px 1px 0 white,
             1px 1px 0 white;
+            margin-bottom: 0;
          }
     }
 
@@ -217,15 +207,30 @@
    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: white;
     background-color: @mainRed;
-    border-color: @gold; /*set the color you want here*/
+    border-color: @gold; /*set the color you want here*/   
 }
+    .btn-primary {
+        border-color: transparent;
+    }
 
     .final {
         background-color: @black;
-        color: @mainRed;
+        margin: auto;
     }
 }
 
+#words {
+        font-family: @headerFont;
+        color: @mainRed;
+        font-size: 1.5em;
+        margin: auto;
+        text-align: center;
+        
+    }
+
+.row{
+    margin-right: 0px;
+}
    
 
 
