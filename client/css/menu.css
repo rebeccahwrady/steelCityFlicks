@@ -105,6 +105,7 @@ div[class*='columnsMenu'] {
   border: 5px solid black;
   color: black;
   background-color: white;
+  font-size: 15px;
 }
 .menuButton {
   height: 50px;
