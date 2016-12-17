@@ -88,12 +88,6 @@ div[class*='columnsMenu'] {
   vertical-align: middle;
   /* vertical alignment of the inline element */
 }
-@media (max-width: 768px) {
-  .vertical-center:before {
-    /* height: auto; */
-    display: none;
-  }
-}
 .options {
   height: 70px;
   line-height: 70px;

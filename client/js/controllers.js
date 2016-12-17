@@ -119,15 +119,10 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
 
         function selectVillain() {
             var changeQuestion = document.getElementsByClassName("questionText");
-            var textQuest = changeQuestion.childNodes;
-            changeQuestion.removeChild(textQuest[0]);
-            var villainQuest = document.createTextNode("Please Select Your Favorite Villain");
-            changeQuestion.appendChild(villainQuest);
+            changeQuestion[0].innerHTML = "Please Select Your Favorite Villain";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(genreArray[j]);
-                // var answerChild = answerID.childNodes;
-                // var thisChild = answerChild[0];
                 answerDiv.removeChild(answerID);
             }
 
@@ -151,10 +146,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
 
         function selectTaste() {
             var changeQuestion = document.getElementById("questionText");
-            var textQuest = changeQuestion.childNodes;
-            changeQuestion.removeChild(textQuest[0]);
-            var tasteQuest = document.createTextNode("Please Select What Taste You Are Looking For");
-            changeQuestion.appendChild(tasteQuest);
+            changeQuestion[0].innerHTML = "Please Select What Taste You Are Looking For";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(villainArray[j]);
