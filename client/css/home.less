@@ -10,13 +10,14 @@
 }
 
 .pic-container {
-	position: absolute;
-	top: 40%;
+	position: relative;
+	margin-top: 7em;
 	overflow: hidden;
 	width: 100%;
 
-	@media screen and (max-width: 844px){
-		top: 15%;
+	@media only screen and (min-width: 844px){
+		position: absolute;
+		top: 40%;
 	}
 }
 
