@@ -9,8 +9,15 @@
 }
 .pic-container {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-30%);
   overflow: hidden;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .pic-container {
+    transform: translateY(-50%);
+  }
 }
 .headerContainer {
   background: #650000;
@@ -35,14 +42,14 @@
   background-position: center;
   background-repeat: none;
   height: 100vh;
+  position: relative;
 }
 .container {
   width: 100%;
   padding: 0;
 }
 .box-container {
-  height: 19em;
-  width: 100vw;
+  width: 100%;
   margin: auto;
   padding: .5em;
 }
@@ -85,14 +92,18 @@ a.link {
   left: 0;
   z-index: 15;
 }
+@media screen and (max-width: 1092px) {
+  .box {
+    margin-bottom: 10px;
+  }
+}
 #aboutHero {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25em;
+  height: 30em;
 }
 #aboutHero h1 {
-  padding-top: 0.75em;
   font-family: "Rye", cursive, Arial, sans-serif;
   color: white;
   text-align: center;
@@ -272,17 +283,12 @@ div[class*='columnsMenu'] {
   vertical-align: middle;
   /* vertical alignment of the inline element */
 }
-@media (max-width: 768px) {
-  .vertical-center:before {
-    /* height: auto; */
-    display: none;
-  }
-}
 .options {
   height: 70px;
   line-height: 70px;
   width: 100px;
-  float: left;
+  padding: 1em;
+  display: inline;
   border-radius: 5px;
   margin: 5px;
   text-align: center;
@@ -302,6 +308,12 @@ div[class*='columnsMenu'] {
 [class*='menu-area'] > [class*='columnsMenu'] {
   padding-left: 0px;
 }
+.questionText {
+  font-size: 20px;
+  height: 25px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
   background-size: cover;
@@ -313,7 +325,7 @@ div[class*='columnsMenu'] {
   color: white;
   text-align: center;
 }
-#theater-seats .h1Container {
+.h1Container {
   padding-top: 10em;
 }
 #select-tickets {
@@ -593,5 +605,9 @@ h4 {
   text-align: center;
 }
 .row {
+  margin-right: 0px;
+}
+.container-fluid {
+  margin-left: 0px;
   margin-right: 0px;
 }

@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="resources/magic.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/variables.css">
-
 </head>
 
 <body>
@@ -28,32 +27,32 @@
                 <a href="/#/home/">
                     <img class="image1" src="../resources/logo.svg">
                 </a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar, #anotherID, #myUl" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar, #anotherID, #myUl" aria-expanded="false">
                         
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        </div>
+            </div>
 
 
-        <div class="collapse navbar-collapse" id="anotherID">
-            <div id="myNavbar"></div>
-            <ul id="myUl" class="nav navbar-nav navbar-right links">
-                <li>
-                    <a href="https://www.facebook.com">
-                        <div class="facebook page-scroll img-responsive"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com">
-                        <img class="twitter page-scroll" src="../resources/twitter-grey.svg" class="img-responsive">
-                    </a>
-                </li>
-            </ul>
-            <h3 class="title"> Steel City Flicks </h3>
-        </div>
+            <div class="collapse navbar-collapse" id="anotherID">
+                <div id="myNavbar"></div>
+                <ul id="myUl" class="nav navbar-nav navbar-right links">
+                    <li>
+                        <a href="https://www.facebook.com">
+                            <div class="facebook page-scroll img-responsive"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <img class="twitter page-scroll" src="../resources/twitter-grey.svg" class="img-responsive">
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="title"> Steel City Flicks </h3>
+            </div>
         </div>
     </nav>
 
@@ -62,7 +61,7 @@
     <div ng-view></div>
 
     <!--footer-->
-    <div class="footer container">
+    <!--<div class="footer container">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-3 footer-logos">
@@ -102,7 +101,37 @@
             </div>
             <div class="col-md-1"></div>
         </div>
-    </div>
+    </div>-->
+
+
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="#">Home</a> ·
+                <a href="#">Blog</a> ·
+                <a href="#">Pricing</a> ·
+                <a href="#">About</a> ·
+                <a href="#">Faq</a> ·
+                <a href="#">Contact</a>
+            </p>
+
+            <p>Company Name &copy; 2015</p>
+        </div>
+
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

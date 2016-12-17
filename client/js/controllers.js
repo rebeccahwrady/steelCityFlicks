@@ -118,16 +118,11 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectVillain() {
-            var changeQuestion = document.getElementsByClassName("questionText");
-            var textQuest = changeQuestion.childNodes;
-            changeQuestion.removeChild(textQuest[0]);
-            var villainQuest = document.createTextNode("Please Select Your Favorite Villain");
-            changeQuestion.appendChild(villainQuest);
+            $rootScope.changeQuestion = document.getElementsByClassName("questionText");
+            $rootScope.changeQuestion[0].innerHTML = "Please Select Your Favorite Villain";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(genreArray[j]);
-                // var answerChild = answerID.childNodes;
-                // var thisChild = answerChild[0];
                 answerDiv.removeChild(answerID);
             }
 
@@ -136,7 +131,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(villainArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "dices");
+                answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
                 answerDiv.appendChild(answer);
                 answer.addEventListener('click', getVillain);
@@ -150,11 +145,8 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectTaste() {
-            var changeQuestion = document.getElementById("questionText");
-            var textQuest = changeQuestion.childNodes;
-            changeQuestion.removeChild(textQuest[0]);
-            var tasteQuest = document.createTextNode("Please Select What Taste You Are Looking For");
-            changeQuestion.appendChild(tasteQuest);
+            // var changeQuestion = document.getElementByClassName("questionText");
+            $rootScope.changeQuestion[0].innerHTML = "Please Select What Taste You Are Looking For";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(villainArray[j]);
@@ -168,7 +160,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(tasteArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "dices");
+                answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
                 answerDiv.appendChild(answer);
                 answer.addEventListener('click', getSelection);
@@ -179,11 +171,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             var taste = this.id;
             answerArray.push(taste);
 
-            var changeQuestion = document.getElementById("questionText");
-            var textQuest = changeQuestion.childNodes;
-            changeQuestion.removeChild(textQuest[0]);
-            var orderShould = document.createTextNode("You Should Order...");
-            changeQuestion.appendChild(orderShould);
+            
 
             for (var j = 0; j < tasteArray.length; j++) {
                 var answerID = document.getElementById(tasteArray[j]);
@@ -195,135 +183,109 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             if (answerArray[0] == "Action") {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Action, The Joker, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, The Joker, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Action, The Joker, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, The Joker, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Action, The Joker, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, The Joker, Spicy");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Action, Cruella de Vil, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Cruella de Vil, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Action, Cruella de Vil, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Cruella de Vil, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Action, Cruella de Vil, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Cruella de Vil, Spicy");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Action, Lex Luther, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Lex Luther, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Action, Lex Luther, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Lex Luther, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Action, Lex Luther, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Action, Lex Luther, Spicy");
                     }
                 }
             }
             else if (answerArray[0] == "Comedy") {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Comedy, The Joker, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, The Joker, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Comedy, The Joker, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, The Joker, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Comedy, The Joker, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, The Joker, Spicy");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Comedy, Cruella de Vil, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Cruella de Vil, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Comedy, Cruella de Vil, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Cruella de Vil, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Comedy, Cruella de Vil, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Cruella de Vil, Spicy");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Comedy, Lex Luther, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Lex Luther, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Comedy, Lex Luther, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Lex Luther, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Comedy, Lex Luther, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Comedy, Lex Luther, Spicy");
                     }
                 }
             }
             else {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Romance, The Joker, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, The Joker, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Romance, The Joker, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, The Joker, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Romance, The Joker, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, The Joker, Spicy");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Romance, Cruella de Vil, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Cruella de Vil, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Romance, Cruella de Vil, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Cruella de Vil, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Romance, Cruella de Vil, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Cruella de Vil, Spicy");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = document.createTextNode("Romance, Lex Luther, Sweet");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Lex Luther, Sweet");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = document.createTextNode("Romance, Lex Luther, Savory");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Lex Luther, Savory");
                     }
                     else {
-                        var order = document.createTextNode("Romance, Lex Luther, Spicy");
-                        changeQuestion.appendChild(order);
+                        var order = ("Romance, Lex Luther, Spicy");
                     }
                 }
             }
+            $rootScope.changeQuestion[0].innerHTML = "You Should Order..." + order;
         };
     }
 ]);
