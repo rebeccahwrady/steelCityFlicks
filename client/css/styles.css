@@ -144,13 +144,14 @@ a.link {
 .blog-area .banana-default {
   margin-left: 3em;
   margin-right: 3em;
-  height: 26em;
+  height: 20em;
 }
 .blog-area .banana-default .banana-body {
   background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  margin: 0 auto;
 }
 .blog-area .banana-default .banana-body .the-buttons {
   text-align: center;
@@ -346,12 +347,12 @@ button {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
-  background-color: red;
+  text-align: center;
 }
 .curtain {
   background-image: url('../resources/red-curtain.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
 }
 .button-container {
@@ -409,8 +410,7 @@ button {
   background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: -13px;
-  margin-right: -13px;
+  background-position: center;
 }
 .newpost input,
 .newpost button,
@@ -431,12 +431,16 @@ button {
 }
 .edit-picture {
   background: url('../resources/red-curtain.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .edit-picture .editpost {
   height: 40em;
   padding-top: 20em;
+}
+.edit-picture .editpost .edit-buttons {
+  text-align: center;
 }
 .edit-picture .editpost input,
 .edit-picture .editpost button,
@@ -454,6 +458,7 @@ button {
 }
 .edit-picture .editpost button {
   color: white;
+  display: inline;
 }
 @media screen and (max-width: 575px) {
   li {
