@@ -10,14 +10,9 @@
 }
 
 .pic-container {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-30%);
-	// position: absolute;
-	// top: 40%;
 	overflow: hidden;
 	width: 100%;
-
+	margin-bottom: @navbar-height;
 	@media screen and (max-width: 500px) {
 		transform: translateY(-50%);
 	}
@@ -50,13 +45,17 @@
   	background-size: cover;
 	background-position: center;
 	background-repeat: none;
+	height: 100%;
 	height: 100vh;
+	padding-top: @navbar-height !important;
+	padding-bottom: @navbar-height !important;
 	position: relative;
 }
 
 .container {
 	width: 100%;
 	padding: 0;
+	overflow: hidden;
 }
 
 .box-container{
@@ -64,6 +63,7 @@
 	width: 100%;
 	margin: auto;
 	padding: .5em;
+	margin-bottom: @navbar-height;
 }
 // .box-content is what's revealed when the cover image moves away
 .box-content {
