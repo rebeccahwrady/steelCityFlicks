@@ -17,6 +17,9 @@ app
 app.route('/api/posts')
     .get(all)
     .post(create);
+
+app.route('/api/movies')
+    .get(allMovies);
     
 app.route('/api/posts/:id')
     .get(read)
@@ -102,6 +105,19 @@ function all(req, res, next){
         }
 	});
 }
+
+function allMovies(req, res, next){
+	var file = path.join(__dirname, 'movies.json');
+	fs.readFile(file, function(err, data) {
+        if (err) {
+            var error = new Error('Error reading datastore');
+            return next(error);
+        } else {
+		    sendResponse(res, data);
+        }
+	});
+}
+
 
 function del(req, res, next) {
     var id = req.params.id;
@@ -226,21 +242,22 @@ function readMovies(req, res, next) {
             var error = new Error('Error reading datastore');
             return next(error);
         } else {
+            var posts;
             try {
-                var movies = JSON.parse(data);
+                posts = JSON.parse(data);
             } catch (e) {
                 var error = new Error('Corrupted datastore');
                 return next(error);
             }
-
-            var movie = movies[id];
-
-            if (movie === 'undefined') {
-                var error = new Error('Movie not found.');
-                return next(error);
+            for (var i = 0; i < posts.length; i++) {
+                var post = posts[i];
+                if (post.id && post.id === id) {
+                    sendResponse(res, JSON.stringify(post));
+                    return;
+                }
             }
-
-            sendResponse(res, JSON.stringify(movie));
+            var error = new Error('Movie not found.');
+            return next(error);
         }
     });
 }
