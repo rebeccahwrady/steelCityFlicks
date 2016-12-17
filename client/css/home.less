@@ -10,15 +10,18 @@
 }
 
 .pic-container {
-	position: relative;
-	margin-top: 7em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-30%);
+	// position: absolute;
+	// top: 40%;
 	overflow: hidden;
 	width: 100%;
 
-	@media only screen and (min-width: 844px){
-		position: absolute;
-		top: 40%;
+	@media screen and (max-width: 500px) {
+		transform: translateY(-50%);
 	}
+
 }
 
 .headerContainer {
@@ -48,6 +51,7 @@
 	background-position: center;
 	background-repeat: none;
 	height: 100vh;
+	position: relative;
 }
 
 .container {
@@ -108,7 +112,8 @@ a.link {
 
 .box {
 
-	@media screen and (max-width: 844px){
+	@media screen and (max-width: 1092px){
+		
 		margin-bottom: 10px;
 
 	}
