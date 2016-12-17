@@ -172,6 +172,8 @@ a.link {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  margin: 0 auto;
+  background-position: center;
 }
 .blog-area .banana-default .banana-body .the-buttons {
   text-align: center;
@@ -210,11 +212,13 @@ a.link {
 }
 .menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
-  height: 35em;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
+  background-position: center;
   margin-bottom: 0px;
+  background-attachment: fixed;
+  height: 35em;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -242,6 +246,12 @@ div[class*='columnsMenu'] {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .questionText {
+    height: 100px;
+    word-wrap: break-word;
+  }
 }
 .mine > [class*='words'] {
   display: flex;
@@ -368,62 +378,22 @@ button {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
-  background-color: red;
+  text-align: center;
 }
 .curtain {
   background-image: url('../resources/red-curtain.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
 }
 .button-container {
   text-align: center;
 }
-.container-fluid {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.container-fluid .curtain {
-  background-image: url('../resources/red-curtain.jpg');
-  margin-left: -13px;
-  margin-right: -13px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-}
-.container-fluid .curtain .blog-stuff {
-  height: 20em;
-  margin: 0 auto;
-  padding-top: 10em;
-}
-.container-fluid .curtain .blog-stuff .singlepost {
-  text-align: center;
-}
-.container-fluid .curtain .blog-stuff .singlepost .content-div {
-  max-width: 30em;
-  margin: 0 auto;
-  padding: 5px;
-  background-color: red;
-}
-@media screen and (max-width: 700px) {
-  .container-fluid .curtain .blog-stuff .singlepost .content-div {
-    width: 20em;
-  }
-}
-.container-fluid .curtain .blog-stuff .singlepost h1,
-.container-fluid .curtain .blog-stuff .singlepost h2,
-.container-fluid .curtain .blog-stuff .singlepost h3,
-.container-fluid .curtain .blog-stuff .singlepost h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Rye", cursive, Arial, sans-serif;
-}
-.container-fluid .curtain .blog-stuff .button-container {
-  text-align: center;
-  margin-top: 10px;
-}
-.container-fluid .curtain .blog-stuff .button-container button {
-  font-family: "Rye", cursive, Arial, sans-serif;
-  color: white;
 }
 .newpost {
   height: 40em;
@@ -431,8 +401,7 @@ button {
   background-image: url('http://www.clipartkid.com/images/442/11054-red-curtain-curtain-XZqPuO-clipart.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: -13px;
-  margin-right: -13px;
+  background-position: center;
 }
 .newpost input,
 .newpost button,
@@ -453,12 +422,16 @@ button {
 }
 .edit-picture {
   background: url('../resources/red-curtain.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .edit-picture .editpost {
   height: 40em;
   padding-top: 20em;
+}
+.edit-picture .editpost .edit-buttons {
+  text-align: center;
 }
 .edit-picture .editpost input,
 .edit-picture .editpost button,
@@ -476,6 +449,7 @@ button {
 }
 .edit-picture .editpost button {
   color: white;
+  display: inline;
 }
 @media screen and (max-width: 575px) {
   li {
