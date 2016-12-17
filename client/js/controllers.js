@@ -60,18 +60,17 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
 
 app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the menu page html
     function ($scope, $rootScope, $location) {
-        console.log('this controller');
         var btn = document.createElement('button');
         btn.setAttribute("class", "menuButton");
         var clickText = document.createTextNode("Can't Decide?");
         var heroWords = document.getElementsByClassName("heroWords");
 
-        var answerArray = [];
-        var genreArray = ["Action", "Comedy", "Romance"];
-        var villainArray = ["The Joker", "Cruella de Vil", "Lex Luther"];
-        var tasteArray = ["Sweet", "Savory", "Spicy"];
+        // var answerArray = [];
+        // var genreArray = ["Action", "Comedy", "Romance"];
+        // var villainArray = ["The Joker", "Cruella de Vil", "Lex Luther"];
+        // var tasteArray = ["Sweet", "Savory", "Spicy"];
 
-        var val = 0;
+        // var val = 0;
 
 
         btn.appendChild(clickText);
@@ -80,13 +79,12 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         firstButton.appendChild(btn);
         heroWords[0].appendChild(firstButton);
 
-
         var questionDiv = document.createElement('div');
-        questionDiv.setAttribute("id", "questionText");
+        questionDiv.setAttribute("class", "questionText");
         heroWords[0].appendChild(questionDiv);
 
         var answerDiv = document.createElement('div');
-        answerDiv.setAttribute("class", "diceDivClass");
+        answerDiv.setAttribute("class", "answerText");
         heroWords[0].appendChild(answerDiv);
 
         btn.addEventListener('click', selectGenre);
@@ -106,7 +104,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(genreArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "dices");
+                answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
                 answerDiv.appendChild(answer);
                 answer.addEventListener('click', getGenre);
@@ -120,7 +118,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectVillain() {
-            var changeQuestion = document.getElementById("questionText");
+            var changeQuestion = document.getElementsByClassName("questionText");
             var textQuest = changeQuestion.childNodes;
             changeQuestion.removeChild(textQuest[0]);
             var villainQuest = document.createTextNode("Please Select Your Favorite Villain");
