@@ -96,8 +96,8 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         function selectGenre() {
             heroWords[0].removeChild(firstButton);
 
-            var question = document.createTextNode("Please Select a Movie Genre");
-            questionDiv.appendChild(question);
+            $rootScope.changeQuestion = document.getElementById("questionText");
+            $rootScope.changeQuestion.innerHTML = "Please Select a Movie Genre";
 
             for (var i = 0; i < genreArray.length; i++) {
                 var answer = document.createElement('div');
@@ -118,8 +118,8 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectVillain() {
-            $rootScope.changeQuestion = document.getElementsByClassName("questionText");
-            $rootScope.changeQuestion[0].innerHTML = "Please Select Your Favorite Villain";
+
+            $rootScope.changeQuestion.innerHTML = "Please Select Your Favorite Villain";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(genreArray[j]);
@@ -145,8 +145,8 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         };
 
         function selectTaste() {
-            // var changeQuestion = document.getElementByClassName("questionText");
-            $rootScope.changeQuestion[0].innerHTML = "Please Select What Taste You Are Looking For";
+
+            $rootScope.changeQuestion.innerHTML = "Please Select What Taste You Are Looking For";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(villainArray[j]);
@@ -285,7 +285,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                     }
                 }
             }
-            $rootScope.changeQuestion[0].innerHTML = "You Should Order..." + order;
+            $rootScope.changeQuestion.innerHTML = "You Should Order..." + order;
         };
     }
 ]);
