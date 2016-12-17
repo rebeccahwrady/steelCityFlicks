@@ -20,14 +20,25 @@
 .blog-area {
     background-color: white;
 
+
     h1 {
         text-align: center;
         color: #0f0606;
+        text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
     }
 
     h2 {
         color: @mainRed;
         text-align: center;
+        text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
     }
 
     .title {
@@ -46,20 +57,40 @@
             background-repeat: no-repeat;
             background-size: cover;
             height: 100%;
+            // overflow: hidden;
         
-            
+    
+                .the-buttons {
+                    text-align: center;
+                }
 
             h1, h3, p, h6, button  {
                 font-family: @heroFont;
+                text-shadow:
+                    -1px -1px 0 white,
+                    1px -1px 0 white,
+                    -1px 1px 0 white,
+                    1px 1px 0 white;
+                text-align: center;
             }
 
             h3 {
                 color: #650000;
-            }
+                text-shadow:
+                    -1px -1px 0 white,
+                    1px -1px 0 white,
+                    -1px 1px 0 white,
+                    1px 1px 0 white;
+                        }
 
             h1, p, h6 {
                 color: @black;
-            }
+                text-shadow:
+                    -1px -1px 0 white,
+                    1px -1px 0 white,
+                    -1px 1px 0 white,
+                    1px 1px 0 white;
+                        }
 
             img {
                 height: 12em;
@@ -68,7 +99,7 @@
                 }
 
             button {
-                color: white;
+                color: black;
             }
          }
     }

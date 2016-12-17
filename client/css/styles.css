@@ -116,10 +116,12 @@ a.link {
 .blog-area h1 {
   text-align: center;
   color: #0f0606;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .blog-area h2 {
   color: #650000;
   text-align: center;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .blog-area .title {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -135,20 +137,27 @@ a.link {
   background-size: cover;
   height: 100%;
 }
+.blog-area .banana-default .banana-body .the-buttons {
+  text-align: center;
+}
 .blog-area .banana-default .banana-body h1,
 .blog-area .banana-default .banana-body h3,
 .blog-area .banana-default .banana-body p,
 .blog-area .banana-default .banana-body h6,
 .blog-area .banana-default .banana-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-align: center;
 }
 .blog-area .banana-default .banana-body h3 {
   color: #650000;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .blog-area .banana-default .banana-body h1,
 .blog-area .banana-default .banana-body p,
 .blog-area .banana-default .banana-body h6 {
   color: #0f0606;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .blog-area .banana-default .banana-body img {
   height: 12em;
@@ -156,7 +165,7 @@ a.link {
   margin-top: 1em;
 }
 .blog-area .banana-default .banana-body button {
-  color: white;
+  color: black;
 }
 .menu-header {
   padding-bottom: 15px;
@@ -300,6 +309,25 @@ button {
 }
 /* FONTS */
 /* COLORS */
+.blogpage-header {
+  padding-top: 15em;
+  text-align: center;
+}
+.blog-body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: red;
+}
+.curtain {
+  background-image: url('../resources/red-curtain.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.button-container {
+  text-align: center;
+}
 .container-fluid {
   margin-left: -15px;
   margin-right: -15px;
@@ -317,11 +345,6 @@ button {
   height: 20em;
   margin: 0 auto;
   padding-top: 10em;
-}
-@media screen and (max-width: 860px) {
-  .container-fluid .curtain .blog-stuff {
-    padding-top: 12em;
-  }
 }
 .container-fluid .curtain .blog-stuff .singlepost {
   text-align: center;
@@ -377,32 +400,30 @@ button {
 .newpost button {
   color: white;
 }
-.editpost {
+.edit-picture {
+  background: url('../resources/red-curtain.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.edit-picture .editpost {
   height: 40em;
   padding-top: 20em;
-  background-image: url('../resources/red-curtain.jpg');
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
-.editpost input,
-.editpost button,
-.editpost textarea {
+.edit-picture .editpost input,
+.edit-picture .editpost button,
+.edit-picture .editpost textarea {
   display: block;
   margin: 0 auto;
 }
-.editpost .smallerbox {
+.edit-picture .editpost .smallerbox {
   width: 20em;
   height: 2em;
 }
-.editpost .largerbox {
+.edit-picture .editpost .largerbox {
   width: 20em;
   height: 10em;
 }
-.editpost button {
+.edit-picture .editpost button {
   color: white;
 }
 @media screen and (max-width: 575px) {
