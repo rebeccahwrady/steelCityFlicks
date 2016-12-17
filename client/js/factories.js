@@ -14,6 +14,10 @@ angular.module('myFlicks.factories', [])
         return $resource('api/contact/:id')
     }])
 
-    .factory('Movies', ['$resource', function($resource){
-        return $resource('api/movies/:id')
+    .factory('MoviesFactory', ['$resource', function($resource){
+        return $resource('http://localhost:3000/api/movies/:id',
+            { 
+                id: '@id'
+            }
+        );
     }]);

@@ -23,6 +23,9 @@ app.route('/api/posts/:id')
     .put(update)
     .delete(del);
 
+app.route('/api/movies/:id')
+    .get(readMovies);
+
 app.route('/api/purchases')
     .post(function(req, res, next) {
          stripe.charges.create({
@@ -211,6 +214,33 @@ function read(req, res, next) {
             }
             var error = new Error('Post not found.');
             return next(error);
+        }
+    });
+}
+
+function readMovies(req, res, next) {
+    var id = req.params.id;
+    var file = path.join(__dirname, 'movies.json');
+    fs.readFile(file, function(err, data) {
+        if (err) {
+            var error = new Error('Error reading datastore');
+            return next(error);
+        } else {
+            try {
+                var movies = JSON.parse(data);
+            } catch (e) {
+                var error = new Error('Corrupted datastore');
+                return next(error);
+            }
+
+            var movie = movies[id];
+
+            if (movie === 'undefined') {
+                var error = new Error('Movie not found.');
+                return next(error);
+            }
+
+            sendResponse(res, JSON.stringify(movie));
         }
     });
 }
