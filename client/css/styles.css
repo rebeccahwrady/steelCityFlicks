@@ -144,7 +144,7 @@ a.link {
 .blog-area .banana-default {
   margin-left: 3em;
   margin-right: 3em;
-  height: 20em;
+  height: 26em;
 }
 .blog-area .banana-default .banana-body {
   background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
@@ -152,6 +152,7 @@ a.link {
   background-size: cover;
   height: 100%;
   margin: 0 auto;
+  background-position: center;
 }
 .blog-area .banana-default .banana-body .the-buttons {
   text-align: center;
@@ -358,51 +359,11 @@ button {
 .button-container {
   text-align: center;
 }
-.container-fluid {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.container-fluid .curtain {
-  background-image: url('../resources/red-curtain.jpg');
-  margin-left: -13px;
-  margin-right: -13px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-}
-.container-fluid .curtain .blog-stuff {
-  height: 20em;
-  margin: 0 auto;
-  padding-top: 10em;
-}
-.container-fluid .curtain .blog-stuff .singlepost {
-  text-align: center;
-}
-.container-fluid .curtain .blog-stuff .singlepost .content-div {
-  max-width: 30em;
-  margin: 0 auto;
-  padding: 5px;
-  background-color: red;
-}
-@media screen and (max-width: 700px) {
-  .container-fluid .curtain .blog-stuff .singlepost .content-div {
-    width: 20em;
-  }
-}
-.container-fluid .curtain .blog-stuff .singlepost h1,
-.container-fluid .curtain .blog-stuff .singlepost h2,
-.container-fluid .curtain .blog-stuff .singlepost h3,
-.container-fluid .curtain .blog-stuff .singlepost h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Rye", cursive, Arial, sans-serif;
-}
-.container-fluid .curtain .blog-stuff .button-container {
-  text-align: center;
-  margin-top: 10px;
-}
-.container-fluid .curtain .blog-stuff .button-container button {
-  font-family: "Rye", cursive, Arial, sans-serif;
-  color: white;
 }
 .newpost {
   height: 40em;
