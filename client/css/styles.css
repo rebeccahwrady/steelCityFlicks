@@ -7,6 +7,11 @@
   color: #0f0606;
   text-align: center;
 }
+.pic-container {
+  position: absolute;
+  top: 40%;
+  overflow: hidden;
+}
 .headerContainer {
   background: #650000;
 }
@@ -38,19 +43,14 @@
 .box-container {
   height: 19em;
   width: 100vw;
-  background-color: #0f0606;
-}
-.box {
-  width: 260px;
-  height: flex;
-  margin: 20px;
-  float: left;
-  position: relative;
+  margin: auto;
+  padding: .5em;
 }
 .box-content {
   display: block;
   padding: 20px;
   background: white;
+  border: 5px solid #0f0606;
   color: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -68,10 +68,13 @@
   left: 0;
   z-index: 10;
   background-color: transparent;
+  padding: 1.1em;
 }
 .box-overlay img {
-  width: 100%;
+  width: 95%;
   height: 100%;
+  margin: 0 auto;
+  display: block;
 }
 a.link {
   display: block;
@@ -161,7 +164,7 @@ a.link {
 .menu-header {
   padding-bottom: 15px;
   margin-top: 0;
-  max-width: 1250px;
+  max-width: 100%;
 }
 .menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
@@ -207,6 +210,8 @@ div[class*='columnsMenu'] {
 }
 #menuCont {
   padding-right: 0px;
+  width: 100%;
+  padding-left: 0px;
 }
 .words {
   padding-top: 0px;
@@ -256,6 +261,9 @@ div[class*='columnsMenu'] {
 }
 .menu-area {
   width: 100%;
+}
+[class*='menu-area'] > [class*='columnsMenu'] {
+  padding-left: 0px;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
@@ -468,13 +476,6 @@ button {
   margin-top: 13px;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-.navbar #words {
-  font-family: "Cookie", cursive, Times, serif;
-  font-weight: 600;
-  padding-top: 500px;
-  color: #650000;
-  font-size: 1.25em;
-}
 .navbar img {
   height: 4em;
   width: 15em;
@@ -536,6 +537,7 @@ button {
   font-family: "Rye", cursive, Arial, sans-serif;
   font-weight: 600;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  margin-bottom: 0;
 }
 .footer .footer-li {
   font-size: 2em;
@@ -563,7 +565,18 @@ button {
   border-color: #F29C1F;
   /*set the color you want here*/
 }
+.footer .btn-primary {
+  border-color: transparent;
+}
 .footer .final {
   background-color: #0f0606;
+  margin: auto;
+}
+#words {
+  font-family: "Cookie", cursive, Times, serif;
+  font-weight: 600;
   color: #650000;
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
 }
