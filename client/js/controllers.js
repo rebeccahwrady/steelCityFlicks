@@ -298,7 +298,7 @@ app.controller('myRecipesPageCtrl', ['$scope', '$rootScope', '$location', //this
 
 app.controller('myMoviesPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the available movies page html
     function ($scope, $rootScope, $location) {
-
+        
     }
 ]);
 
@@ -386,9 +386,11 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
 
 }])
 
-app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase',//this is the controller for the ticket purchase page html
-    function ($scope, $rootScope, $location, Purchase) {
-        console.log("this controller");
+app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', 'MoviesFactory',//this is the controller for the ticket purchase page html
+    function ($scope, $rootScope, $location, Purchase, MoviesFactory) {
+        $scope.movie = MoviesFactory.get({id:1}, function(success){
+            console.log(success);
+        });
 
         $scope.purchaseError = false;
         $scope.chargeCard = function () {

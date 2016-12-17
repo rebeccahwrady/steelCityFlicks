@@ -247,10 +247,13 @@ div[class*='columnsMenu'] {
   flex-wrap: wrap;
   width: 100%;
 }
-@media screen and (min-width: 480px) {
+.questionText {
+  word-wrap: break-word;
+}
+@media screen and (max-width: 480px) {
   .questionText {
     height: 100px;
-    word-wrap: break-word;
+    background-color: red;
   }
 }
 .mine > [class*='words'] {
