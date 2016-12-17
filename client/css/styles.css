@@ -8,15 +8,15 @@
   text-align: center;
 }
 .pic-container {
-  position: relative;
-  margin-top: 7em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
   overflow: hidden;
   width: 100%;
 }
-@media only screen and (min-width: 844px) {
+@media screen and (max-width: 500px) {
   .pic-container {
-    position: absolute;
-    top: 40%;
+    transform: translateY(-50%);
   }
 }
 .headerContainer {
@@ -42,6 +42,7 @@
   background-position: center;
   background-repeat: none;
   height: 100vh;
+  position: relative;
 }
 .container {
   width: 100%;
@@ -91,7 +92,7 @@ a.link {
   left: 0;
   z-index: 15;
 }
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 1092px) {
   .box {
     margin-bottom: 10px;
   }
