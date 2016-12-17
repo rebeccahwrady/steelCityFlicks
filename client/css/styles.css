@@ -161,7 +161,7 @@ a.link {
 .menu-header {
   padding-bottom: 15px;
   margin-top: 0;
-  max-width: 1250px;
+  max-width: 100%;
 }
 .menu-header .theater-heroMenu {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-1.jpg');
@@ -207,6 +207,8 @@ div[class*='columnsMenu'] {
 }
 #menuCont {
   padding-right: 0px;
+  width: 100%;
+  padding-left: 0px;
 }
 .words {
   padding-top: 0px;
@@ -256,6 +258,9 @@ div[class*='columnsMenu'] {
 }
 .menu-area {
   width: 100%;
+}
+[class*='menu-area'] > [class*='columnsMenu'] {
+  padding-left: 0px;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
