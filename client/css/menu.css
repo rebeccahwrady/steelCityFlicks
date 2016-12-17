@@ -88,12 +88,6 @@ div[class*='columnsMenu'] {
   vertical-align: middle;
   /* vertical alignment of the inline element */
 }
-@media (max-width: 768px) {
-  .vertical-center:before {
-    /* height: auto; */
-    display: none;
-  }
-}
 .options {
   height: 70px;
   line-height: 70px;
@@ -118,4 +112,10 @@ div[class*='columnsMenu'] {
 }
 [class*='menu-area'] > [class*='columnsMenu'] {
   padding-left: 0px;
+}
+.questionText {
+  font-size: 20px;
+  height: 25px;
+  padding-top: 20px;
+  margin-bottom: 5px;
 }
