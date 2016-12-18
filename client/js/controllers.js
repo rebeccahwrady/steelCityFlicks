@@ -54,6 +54,9 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
             }, function(err){
                 console.log(err);
             });
+            var contactFrm = document.getElementById('contact-form');
+            contactFrm.reset();
+            return false;
         };
     }
 ]);
