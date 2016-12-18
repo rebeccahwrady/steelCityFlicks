@@ -7,9 +7,9 @@
             </div>
         </div>
     </div>
-     <div class="container-fluid">
+     <div class="container">
          <div class="row">
-             <div class="col-md-12" id="storyHeading">
+             <div class="col-md-12 storyHeading">
                  <h2>Our Story</h2>
              </div>
          </div>
@@ -31,14 +31,17 @@
                     in musicis</p>
             </div>
         </div>
-    </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 contactMapContainers">
-            <form name="contact-form" id="contact-form">
-                <!--<div data-ng-hide="formError()">
-                    {{errorMessage}}
-                </div>-->
+         <div class="row">
+             <div class="col-md-12 storyHeading">
+                 <h2>Drop Us A Line</h2>
+             </div>
+         </div>
+        <div class="row">
+            <div class="col-md-6 contactMapContainers">
+                <form name="contact-form" id="contact-form">
+                    <!--<div data-ng-hide="formError()">
+                        {{errorMessage}}
+                    </div>-->
                 <!--USER NAME-->
                 <div class="form-group">
                     <label for="contactName">Name</label>
@@ -62,7 +65,7 @@
                 <!--MESSAGE-->
                 <div class="form-group">
                     <label for="contactMessage">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" ng-model="contactData.content" required></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="You talkin’ to me?" ng-model="contactData.content" required></textarea>
                 </div>
                 <!--SEND BUTTON-->
                 <div class="form-group">
