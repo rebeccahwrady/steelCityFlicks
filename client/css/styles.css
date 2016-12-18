@@ -10,7 +10,7 @@
 .pic-container {
   overflow: hidden;
   width: 100%;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-bottom: 5em;
 }
 @media screen and (max-width: 500px) {
