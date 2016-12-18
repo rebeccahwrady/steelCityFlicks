@@ -35,7 +35,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 contactMapContainers">
-            <form name="contact-form">
+            <form name="contact-form" id="contact-form">
                 <!--<div data-ng-hide="formError()">
                     {{errorMessage}}
                 </div>-->
@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
-                    <input type="text" placeholder="Enter Name" id="subjectInput" class="form-control" ng-model="contactData.subject" required>
+                    <input type="text" placeholder="Enter the subject of your inquiry" id="subjectInput" class="form-control" ng-model="contactData.subject" required>
                 </div>
                 <!--MESSAGE-->
                 <div class="form-group">
@@ -66,7 +66,7 @@
                 </div>
                 <!--SEND BUTTON-->
                 <div class="form-group">
-                    <button class="btn btn-lg" ng-disabled="sendButtonDisabled" ng-click="sendEmail()">Send!</button>
+                    <button class="btn btn-lg" value="Submit" ng-disabled="submitButtonDisabled" ng-click="sendEmail()">Send!</button>
                 </div>
             </form>
         </div>

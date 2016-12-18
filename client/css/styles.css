@@ -103,8 +103,13 @@ a.link {
 }
 #aboutHero {
   background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 30em;
 }
 #aboutHero h1 {
@@ -169,7 +174,10 @@ a.link {
 }
 .blog-area .title .create-button {
   text-align: center;
+}
+.blog-area .title .create-button button {
   color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .blog-area .banana-default {
   margin-left: 3em;
@@ -432,34 +440,39 @@ h4 {
 .newpost button {
   color: white;
 }
-.edit-picture {
-  background: url('../resources/red-curtain.jpg');
+.edit-page {
+  padding-top: 5em;
+}
+.edit-page .edit-picture {
+  background: url(../resources/red-curtain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: -28px;
+  margin-right: -28px;
 }
-.edit-picture .editpost {
+.edit-page .edit-picture .editpost {
   height: 40em;
-  padding-top: 20em;
+  padding-top: 15em;
 }
-.edit-picture .editpost .edit-buttons {
+.edit-page .edit-picture .editpost .edit-buttons {
   text-align: center;
 }
-.edit-picture .editpost input,
-.edit-picture .editpost button,
-.edit-picture .editpost textarea {
+.edit-page .edit-picture .editpost input,
+.edit-page .edit-picture .editpost button,
+.edit-page .edit-picture .editpost textarea {
   display: block;
   margin: 0 auto;
 }
-.edit-picture .editpost .smallerbox {
+.edit-page .edit-picture .editpost .smallerbox {
   width: 20em;
   height: 2em;
 }
-.edit-picture .editpost .largerbox {
+.edit-page .edit-picture .editpost .largerbox {
   width: 20em;
   height: 10em;
 }
-.edit-picture .editpost button {
+.edit-page .edit-picture .editpost button {
   color: white;
   display: inline;
 }

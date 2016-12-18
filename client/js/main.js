@@ -50,7 +50,7 @@ app.config(['$routeProvider', function($routeProvider) {
                 controller: 'EditPostController'
             })
         // this one needs to have the reviews ids worked into it!
-        .when('/tickets', {
+        .when('/movies/:id', {
             templateUrl: 'views/tickets.html',
             controller: 'myTicketsPageCtrl'
         })
