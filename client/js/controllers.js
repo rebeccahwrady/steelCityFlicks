@@ -404,12 +404,17 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
     }
 }])
 
-app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', 'MoviesFactory',//this is the controller for the ticket purchase page html
-    function ($scope, $rootScope, $location, Purchase, MoviesFactory) {
-        $scope.movie = MoviesFactory.get({id:1}, function(success){
+app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', '$routeParams', 'MoviesFactory',//this is the controller for the ticket purchase page html
+    function ($scope, $rootScope, $location, Purchase, $routeParams, MoviesFactory) {
+        var idofmovie = $routeParams.id;
+        $scope.movie = MoviesFactory.get({id: idofmovie}, function(success){
             console.log(success);
         });
-
+        // navigate back to movies view on button click.
+        $scope.backToMovies = function(){
+            $location.path('/movies');
+        }
+        //charge card function that calls Stripe API. Also reveals purchase error if payment error response from Stripe.
         $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({
