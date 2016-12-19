@@ -410,11 +410,11 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
         $scope.movie = MoviesFactory.get({id: idofmovie}, function(success){
             console.log(success);
         });
-
+        // navigate back to movies view on button click.
         $scope.backToMovies = function(){
             $location.path('/movies');
         }
-
+        //charge card function that calls Stripe API. Also reveals purchase error if payment error response from Stripe.
         $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({
