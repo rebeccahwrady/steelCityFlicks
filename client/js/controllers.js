@@ -404,9 +404,10 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
     }
 }])
 
-app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', 'MoviesFactory',//this is the controller for the ticket purchase page html
-    function ($scope, $rootScope, $location, Purchase, MoviesFactory) {
-        $scope.movie = MoviesFactory.get({id:1}, function(success){
+app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', '$routeParams', 'MoviesFactory',//this is the controller for the ticket purchase page html
+    function ($scope, $rootScope, $location, Purchase, $routeParams, MoviesFactory) {
+        var idofmovie = $routeParams.id;
+        $scope.movie = MoviesFactory.get({id: idofmovie}, function(success){
             console.log(success);
         });
 
