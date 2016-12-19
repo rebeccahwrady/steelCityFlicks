@@ -370,6 +370,10 @@ div[class*='columnsMenu'] {
 .h1Container {
   padding-top: 10em;
 }
+#backBtnDiv {
+  margin-left: 1.5em;
+  margin-bottom: 1.75em;
+}
 #select-tickets {
   font-family: "Rye", cursive, Arial, sans-serif;
   margin-top: 1.5em;

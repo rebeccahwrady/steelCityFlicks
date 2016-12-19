@@ -411,6 +411,10 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
             console.log(success);
         });
 
+        $scope.backToMovies = function(){
+            $location.path('/movies');
+        }
+
         $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({
