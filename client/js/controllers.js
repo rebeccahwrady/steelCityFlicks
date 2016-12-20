@@ -94,14 +94,15 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
         firstButton.appendChild(btn);
         heroWords[0].appendChild(firstButton);
 
-        var questionDiv = document.createElement('div');
-        questionDiv.setAttribute("class", "questionText");
-        heroWords[0].appendChild(questionDiv);
+        // var questionDiv = document.createElement('div');
+        // questionDiv.setAttribute("class", "questionText");
+        // heroWords[0].appendChild(questionDiv);
 
-        var answerDiv = document.createElement('div');
-        answerDiv.setAttribute("class", "answerText");
-        heroWords[0].appendChild(answerDiv);
-
+        // var answerDiv = document.createElement('div');
+        // answerDiv.setAttribute("class", "answerText");
+        // heroWords[0].appendChild(answerDiv);
+        var theDiv = document.getElementsByClassName('answerText')
+        $rootScope.answerDiv = theDiv[0];
         btn.addEventListener('click', selectGenre);
 
         var AnswerBox = function (value) {
@@ -121,7 +122,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 answer.appendChild(name);
                 answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
-                answerDiv.appendChild(answer);
+                $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getGenre);
             }
         }
@@ -138,7 +139,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(genreArray[j]);
-                answerDiv.removeChild(answerID);
+                $rootScope.answerDiv.removeChild(answerID);
             }
 
             for (var i = 0; i < villainArray.length; i++) {
@@ -148,7 +149,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 answer.appendChild(name);
                 answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
-                answerDiv.appendChild(answer);
+                $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getVillain);
             }
         };
@@ -167,7 +168,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var answerID = document.getElementById(villainArray[j]);
                 var answerChild = answerID.childNodes;
                 var thisChild = answerChild[0]
-                answerDiv.removeChild(answerID);
+                $rootScope.answerDiv.removeChild(answerID);
             }
 
             for (var i = 0; i < tasteArray.length; i++) {
@@ -177,7 +178,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 answer.appendChild(name);
                 answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
-                answerDiv.appendChild(answer);
+                $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getSelection);
             }
         };
@@ -192,7 +193,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var answerID = document.getElementById(tasteArray[j]);
                 var answerChild = answerID.childNodes;
                 var thisChild = answerChild[0]
-                answerDiv.removeChild(answerID);
+                $rootScope.answerDiv.removeChild(answerID);
             }
 
             if (answerArray[0] == "Action") {
@@ -327,7 +328,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 answer.appendChild(name);
                 answer.setAttribute("class", "options");
                 answer.setAttribute("id", newAnswer.value);
-                answerDiv.appendChild(answer);
+                $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getGenre);
             }
         }
