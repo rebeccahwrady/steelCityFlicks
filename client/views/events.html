@@ -2,21 +2,23 @@
 
 	<div class="blog-header">
 		<div class="row">
-			<div class="theater-hero"></div>
+			<div class="theater-hero jumbotron"">
+				<div class="row title">
+					<div class="col-md-12">
+						<h1>What's Happening?</h1>
+						<h2>Steel City Events</h2>
+						
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
 	<div class="blog-area">
-		<div class="row title">
-			<div class="col-md-12">
-				<h1>What's Happening?</h1>
-				<h2>Steel City Events</h2>
-				<div class="create-button">
-					<button ng-click="goToNewPost()">Create Post</button>
-				</div>
-			</div>
+		<div class="create-button">
+			<button ng-click="goToNewPost()">Create Post</button>
 		</div>
-
 		<div class="row">
 			<div class="col-md-4 blogposts" ng-repeat="blog in blogposts">
 				<div class="banana banana-default">

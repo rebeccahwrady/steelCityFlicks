@@ -159,6 +159,12 @@ a.link {
   background-size: cover;
   height: 35em;
 }
+.blog-header .theater-hero .title {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  color: white;
+  padding-top: 5em;
+  text-align: center;
+}
 .blog-area {
   background-color: white;
   padding-bottom: 5em;
@@ -173,22 +179,22 @@ a.link {
   text-align: center;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-.blog-area .title {
-  font-family: "Rye", cursive, Arial, sans-serif;
-}
-.blog-area .title .create-button {
+.blog-area .create-button {
   text-align: center;
+  padding-top: 2em;
 }
-.blog-area .title .create-button button {
+.blog-area .create-button button {
   color: black;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  height: 3em;
+  width: 10em;
 }
-.blog-area .banana-default {
+.banana-default {
   margin-left: 3em;
   margin-right: 3em;
   height: 26em;
 }
-.blog-area .banana-default .banana-body {
+.banana-default .banana-body {
   background-image: url('http://media.istockphoto.com/vectors/theater-stage-background-vector-id467475828?s=235x235');
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,34 +202,34 @@ a.link {
   margin: 0 auto;
   background-position: center;
 }
-.blog-area .banana-default .banana-body .the-buttons {
+.banana-default .banana-body .the-buttons {
   text-align: center;
 }
-.blog-area .banana-default .banana-body h1,
-.blog-area .banana-default .banana-body h3,
-.blog-area .banana-default .banana-body p,
-.blog-area .banana-default .banana-body h6,
-.blog-area .banana-default .banana-body button {
+.banana-default .banana-body h1,
+.banana-default .banana-body h3,
+.banana-default .banana-body p,
+.banana-default .banana-body h6,
+.banana-default .banana-body button {
   font-family: "Rye", cursive, Arial, sans-serif;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   text-align: center;
 }
-.blog-area .banana-default .banana-body h3 {
+.banana-default .banana-body h3 {
   color: #650000;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-.blog-area .banana-default .banana-body h1,
-.blog-area .banana-default .banana-body p,
-.blog-area .banana-default .banana-body h6 {
+.banana-default .banana-body h1,
+.banana-default .banana-body p,
+.banana-default .banana-body h6 {
   color: #0f0606;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-.blog-area .banana-default .banana-body img {
+.banana-default .banana-body img {
   height: 12em;
   width: 20em;
   margin-top: 1em;
 }
-.blog-area .banana-default .banana-body button {
+.banana-default .banana-body button {
   color: black;
 }
 .menu-header {
@@ -473,11 +479,7 @@ h4 {
   color: white;
   display: inline;
 }
-.edit-page {
-  padding-top: 5em;
-  min-height: 100vh;
-}
-.edit-page .edit-picture {
+.edit-picture {
   background: url(../resources/red-curtain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -486,28 +488,28 @@ h4 {
   margin-right: -28px;
   min-height: 100vh;
 }
-.edit-page .edit-picture .editpost {
+.edit-picture .editpost {
   height: 40em;
   padding-top: 15em;
 }
-.edit-page .edit-picture .editpost .edit-buttons {
+.edit-picture .editpost .edit-buttons {
   text-align: center;
 }
-.edit-page .edit-picture .editpost input,
-.edit-page .edit-picture .editpost button,
-.edit-page .edit-picture .editpost textarea {
+.edit-picture .editpost input,
+.edit-picture .editpost button,
+.edit-picture .editpost textarea {
   display: block;
   margin: 0 auto;
 }
-.edit-page .edit-picture .editpost .smallerbox {
+.edit-picture .editpost .smallerbox {
   width: 20em;
   height: 2em;
 }
-.edit-page .edit-picture .editpost .largerbox {
+.edit-picture .editpost .largerbox {
   width: 20em;
   height: 10em;
 }
-.edit-page .edit-picture .editpost button {
+.edit-picture .editpost button {
   color: white;
   display: inline;
 }
