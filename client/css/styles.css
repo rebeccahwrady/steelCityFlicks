@@ -214,6 +214,9 @@ a.link {
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   text-align: center;
 }
+.banana-default .banana-body h1 {
+  padding-top: 2em;
+}
 .banana-default .banana-body h3 {
   color: #650000;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
