@@ -44,12 +44,18 @@ div[class*='columnsMenu'] {
   flex-wrap: wrap;
   width: 100%;
 }
+#questionText {
+  word-wrap: break-word;
+}
 .questionText {
   word-wrap: break-word;
+  padding-bottom: 15px;
 }
 @media screen and (max-width: 480px) {
   .questionText {
     height: 100px;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
 .mine > [class*='words'] {
@@ -75,6 +81,7 @@ div[class*='columnsMenu'] {
 .title {
   font-size: 25px;
   text-align: center;
+  font-style: "Rye", cursive, Arial, sans-serif;
 }
 .food-container {
   width: 1025px;
@@ -136,4 +143,6 @@ div[class*='columnsMenu'] {
   height: 25px;
   padding-top: 20px;
   margin-bottom: 5px;
+  max-width: 100%;
+  word-wrap: break-word;
 }

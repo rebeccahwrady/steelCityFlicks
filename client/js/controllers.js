@@ -34,7 +34,7 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
                 scaledSize: new google.maps.Size(35, 35),
                 origin: new google.maps.Point(0,0), // origin
                 anchor: new google.maps.Point(0, 0)
-            }
+            };
             
             var marker = new google.maps.Marker({
                 position: coordinates,

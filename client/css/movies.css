@@ -8,7 +8,7 @@ Jumbotron
 *************/
 
 .jumbotron {
-    background-image: url('../img-ana/theater-4.jpg');
+    background-image: url('http://img.kelbymediagroup.com/scottkelby/wp-content/uploads/2015/03/Byrd-Theater-4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     /*background-position: top;*/
@@ -24,7 +24,6 @@ Jumbotron
     padding-bottom: 40px;
     animation: blink-animation 1s steps(5, start) infinite;
     -webkit-animation: blink-animation 1s steps(5, start) infinite;
-    animation-iteration-count: 5;
 }
 
 @keyframes blink-animation {
@@ -81,4 +80,8 @@ Animation
     animation-name: lightSpeedIn;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+}
+
+#buyticketsbtn {
+    font: #650000;
 }

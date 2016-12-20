@@ -279,18 +279,6 @@ div[class*='columnsMenu'] {
   flex-wrap: wrap;
   width: 100%;
 }
-#questionText {
-  word-wrap: break-word;
-}
-.questionText {
-  word-wrap: break-word;
-  padding-bottom: 15px;
-}
-@media screen and (max-width: 480px) {
-  .questionText {
-    height: 100px;
-  }
-}
 .mine > [class*='words'] {
   display: flex;
   flex-direction: column;
@@ -307,13 +295,18 @@ div[class*='columnsMenu'] {
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
+  font-size: 25px;
+  text-align: center;
 }
 .descrip {
   font-style: italic;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 .title {
   font-size: 25px;
   text-align: center;
+  font-family: "Rye", cursive, Arial, sans-serif;
 }
 .food-container {
   width: 1025px;
@@ -341,9 +334,9 @@ div[class*='columnsMenu'] {
   /* vertical alignment of the inline element */
 }
 .options {
-  height: 70px;
+  height: 100px;
   line-height: 70px;
-  width: 100px;
+  width: 150px;
   padding: 1em;
   display: inline;
   border-radius: 5px;
@@ -352,7 +345,7 @@ div[class*='columnsMenu'] {
   border: 5px solid black;
   color: black;
   background-color: white;
-  font-size: 15px;
+  font-size: 20px;
 }
 .menuButton {
   height: 50px;
@@ -363,6 +356,7 @@ div[class*='columnsMenu'] {
   height: 50px;
   width: 300px;
   font-size: 15px;
+  margin-top: 15px;
 }
 .menu-area {
   width: 100%;
@@ -371,10 +365,21 @@ div[class*='columnsMenu'] {
   padding-left: 0px;
 }
 .questionText {
-  font-size: 20px;
   height: 25px;
   padding-top: 20px;
   margin-bottom: 5px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 480px) {
+  .questionText {
+    height: 100px;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+}
+#questionText {
+  font-size: 35px;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
