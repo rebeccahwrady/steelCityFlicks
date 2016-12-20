@@ -1,9 +1,11 @@
-<div class="container-fluid">   
+<div class="container-fluid newpost-page">   
 <div class="newpost">
     <textarea class="smallbox" ng-model="blog.author" placeholder="What's your name?"></textarea>
     <textarea class="smallbox" ng-model="blog.title" placeholder="What's your title?"></textarea>
     <textarea class="largebox" ng-model="blog.content" placeholder="What's your message?"></textarea>
+    <div class="new-buttons">
     <button ng-click="savePost()">Post</button>
     <button ng-click="backToEvents()">Back to Events</button>
+    </div>
 </div>
 </div>
