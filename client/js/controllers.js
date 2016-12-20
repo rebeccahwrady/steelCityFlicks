@@ -190,110 +190,139 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             if (answerArray[0] == "Action") {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Action, The Joker, Sweet");
+                        var order = "the Zombieland";
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Action, The Joker, Savory");
+                        var order = ("The Big Short");
                     }
                     else {
-                        var order = ("Action, The Joker, Spicy");
+                        var order = ("the Frankenweenie");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Action, Cruella de Vil, Sweet");
+                        var order = ("The Help");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Action, Cruella de Vil, Savory");
+                        var order = ("the Sound of Music");
                     }
                     else {
-                        var order = ("Action, Cruella de Vil, Spicy");
+                        var order = ("the Fried Green Tomatoes");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Action, Lex Luther, Sweet");
+                        var order = ("the Labor Day");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Action, Lex Luther, Savory");
+                        var order = ("the Pulp Fiction");
                     }
                     else {
-                        var order = ("Action, Lex Luther, Spicy");
+                        var order = ("The Big Short");
                     }
                 }
             }
             else if (answerArray[0] == "Comedy") {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Comedy, The Joker, Sweet");
+                        var order = ("the Serendipity");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Comedy, The Joker, Savory");
+                        var order = ("the Lady and the Tramp");
                     }
                     else {
-                        var order = ("Comedy, The Joker, Spicy");
+                        var order = ("The Martian");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Comedy, Cruella de Vil, Sweet");
+                        var order = ("the Tequila Sunrise");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Comedy, Cruella de Vil, Savory");
+                        var order = ("the Mean Girls");
                     }
                     else {
-                        var order = ("Comedy, Cruella de Vil, Spicy");
+                        var order = ("the Frankenweenie");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Comedy, Lex Luther, Sweet");
+                        var order = ("the Labor Day");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Comedy, Lex Luther, Savory");
+                        var order = ("The Big Short");
                     }
                     else {
-                        var order = ("Comedy, Lex Luther, Spicy");
+                        var order = ("the Frankenweenie");
                     }
                 }
             }
             else {
                 if (answerArray[1] == "The Joker") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Romance, The Joker, Sweet");
+                        var order = ("the Serendipity");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Romance, The Joker, Savory");
+                        var order = ("the Lady and the Tramp");
                     }
                     else {
-                        var order = ("Romance, The Joker, Spicy");
+                        var order = ("the Fried Green Tomatoes");
                     }
                 }
                 else if (answerArray[1] == "Cruella de Vil") {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Romance, Cruella de Vil, Sweet");
+                        var order = ("the Labor Day");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Romance, Cruella de Vil, Savory");
+                        var order = ("the Pulp Fiction");
                     }
                     else {
-                        var order = ("Romance, Cruella de Vil, Spicy");
+                        var order = ("the Sound of Music");
                     }
                 }
                 else {
                     if (answerArray[2] == "Sweet") {
-                        var order = ("Romance, Lex Luther, Sweet");
+                        var order = ("the Serendipity");
                     }
                     else if (answerArray[2] == "Savory") {
-                        var order = ("Romance, Lex Luther, Savory");
+                        var order = ("The Martian");
                     }
                     else {
-                        var order = ("Romance, Lex Luther, Spicy");
+                        var order = ("The Big Short");
                     }
                 }
             }
-            $rootScope.changeQuestion.innerHTML = "You Should Order..." + order;
+
+            $rootScope.changeQuestion.innerHTML = "You Should Order " + order;
+
+            var btnTwo = document.createElement('button');
+            btnTwo.setAttribute("class", "menuButtonTry");
+            var resetText = document.createTextNode("Nah, that's not it. Retry!");
+            btnTwo.appendChild(resetText);
+            $rootScope.secondButton = document.createElement('div');
+            $rootScope.secondButton.appendChild(btnTwo);
+            heroWords[0].appendChild($rootScope.secondButton);
+            btnTwo.addEventListener('click', selectGenreReset);
         };
+        
+        function selectGenreReset() {
+            heroWords[0].removeChild($rootScope.secondButton);
+            answerArray = [];
+
+            $rootScope.changeQuestion = document.getElementById("questionText");
+            $rootScope.changeQuestion.innerHTML = "Please Select a Movie Genre";
+
+            for (var i = 0; i < genreArray.length; i++) {
+                var answer = document.createElement('div');
+                var newAnswer = new AnswerBox(genreArray[i]);
+                var name = document.createTextNode(newAnswer.value);
+                answer.appendChild(name);
+                answer.setAttribute("class", "options");
+                answer.setAttribute("id", newAnswer.value);
+                answerDiv.appendChild(answer);
+                answer.addEventListener('click', getGenre);
+            }
+        }
     }
 ]);
 

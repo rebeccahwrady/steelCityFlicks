@@ -346,6 +346,11 @@ div[class*='columnsMenu'] {
   width: 200px;
   font-size: 15px;
 }
+.menuButtonTry {
+  height: 50px;
+  width: 300px;
+  font-size: 15px;
+}
 .menu-area {
   width: 100%;
 }

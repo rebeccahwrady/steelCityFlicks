@@ -1,9 +1,6 @@
-body { 
-    
-
+body {
+    margin-top: 30px;
 }
-
-
 
 
 /************
@@ -24,11 +21,31 @@ Jumbotron
 #jumbo-h1 {
     font-family: "Rye", cursive, Arial, sans-serif;
     margin-top: 200px;
+    padding-bottom: 40px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    animation-iteration-count: 5;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
 
 .btn,
 .active {
     transition: .4s;
+}
+
+#sec1hd {
+    padding-bottom: 40px;
 }
 
 
@@ -37,34 +54,31 @@ Animation
 *************/
 
 @keyframes lightSpeedIn {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
-    opacity: 0;
-  }
-
-  60% {
-    -webkit-transform: skewX(20deg);
-    transform: skewX(20deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-    opacity: 1;
-  }
-
-  to {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-  }
+    from {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
 }
 
 .lightSpeedIn {
-  -webkit-animation-name: lightSpeedIn;
-  animation-name: lightSpeedIn;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
