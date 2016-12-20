@@ -49,7 +49,7 @@ app.route('/api/purchases')
 
 app.route('/api/contact')
     .post(function(req,res,next) {
-        emailSvc.sendEmail('mdpasker@gmail.com', req.body.fullname, req.body.fromEmail, req.body.subject, req.body.content)
+        emailSvc.sendEmail('steelcityflicks@gmail.com', req.body.fullname, req.body.fromEmail, req.body.subject, req.body.content)
             .then(function(success) {
                 console.log(success);
                 console.log('check');
