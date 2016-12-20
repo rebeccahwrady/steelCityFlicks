@@ -116,7 +116,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             $rootScope.changeQuestion.innerHTML = "Please Select a Movie Genre";
 
             for (var i = 0; i < genreArray.length; i++) {
-                var answer = document.createElement('div');
+                var answer = document.createElement('btn');
                 var newAnswer = new AnswerBox(genreArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
@@ -143,7 +143,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             }
 
             for (var i = 0; i < villainArray.length; i++) {
-                var answer = document.createElement('div');
+                var answer = document.createElement('btn');
                 var newAnswer = new AnswerBox(villainArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
@@ -172,7 +172,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
             }
 
             for (var i = 0; i < tasteArray.length; i++) {
-                var answer = document.createElement('div');
+                var answer = document.createElement('btn');
                 var newAnswer = new AnswerBox(tasteArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
