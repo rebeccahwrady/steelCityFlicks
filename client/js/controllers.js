@@ -40,6 +40,7 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
           subject: '',
           content: ''  
         };
+        $scope.submitButtonDisabled = false;
         $scope.sendEmail = function(){
             var contact = {
                 fullname: $scope.contactData.fullname,
@@ -51,6 +52,12 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
             newContact.$save(function(){
                 console.log("Email sent!")
                 console.log(newContact);
+                // disable submit button once message is sent to prevent spamming.
+                $scope.submitButtonDisabled = true;
+                var contactFrm = document.getElementById('contact-form');
+                contactFrm.reset();
+                alert('Thanks for your inquiry! You will recieve a response shortly. If you need to send us another message, please refresh the page.')
+                // return false;
             }, function(err){
                 console.log(err);
             });
@@ -397,12 +404,17 @@ app.controller('EditPostController', ['$scope', 'BlogpostFactory', '$routeParams
     }
 }])
 
-app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', 'MoviesFactory',//this is the controller for the ticket purchase page html
-    function ($scope, $rootScope, $location, Purchase, MoviesFactory) {
-        $scope.movie = MoviesFactory.get({id:1}, function(success){
+app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purchase', '$routeParams', 'MoviesFactory',//this is the controller for the ticket purchase page html
+    function ($scope, $rootScope, $location, Purchase, $routeParams, MoviesFactory) {
+        var idofmovie = $routeParams.id;
+        $scope.movie = MoviesFactory.get({id: idofmovie}, function(success){
             console.log(success);
         });
-
+        // navigate back to movies view on button click.
+        $scope.backToMovies = function(){
+            $location.path('/movies');
+        }
+        //charge card function that calls Stripe API. Also reveals purchase error if payment error response from Stripe.
         $scope.purchaseError = false;
         $scope.chargeCard = function () {
             Stripe.card.createToken({

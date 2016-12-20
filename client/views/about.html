@@ -7,9 +7,9 @@
             </div>
         </div>
     </div>
-     <div class="container-fluid">
+     <div class="container">
          <div class="row">
-             <div class="col-md-12" id="storyHeading">
+             <div class="col-md-12 storyHeading">
                  <h2>Our Story</h2>
              </div>
          </div>
@@ -31,14 +31,17 @@
                     in musicis</p>
             </div>
         </div>
-    </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 contactMapContainers">
-            <form name="contact-form">
-                <!--<div data-ng-hide="formError()">
-                    {{errorMessage}}
-                </div>-->
+         <div class="row">
+             <div class="col-md-12 storyHeading">
+                 <h2>Drop Us A Line</h2>
+             </div>
+         </div>
+        <div class="row">
+            <div class="col-md-6 contactMapContainers">
+                <form name="contact-form" id="contact-form">
+                    <!--<div data-ng-hide="formError()">
+                        {{errorMessage}}
+                    </div>-->
                 <!--USER NAME-->
                 <div class="form-group">
                     <label for="contactName">Name</label>
@@ -57,16 +60,16 @@
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
-                    <input type="text" placeholder="Enter Name" id="subjectInput" class="form-control" ng-model="contactData.subject" required>
+                    <input type="text" placeholder="Enter the subject of your inquiry" id="subjectInput" class="form-control" ng-model="contactData.subject" required>
                 </div>
                 <!--MESSAGE-->
                 <div class="form-group">
                     <label for="contactMessage">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" ng-model="contactData.content" required></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="You talkin’ to me?" ng-model="contactData.content" required></textarea>
                 </div>
                 <!--SEND BUTTON-->
                 <div class="form-group">
-                    <button class="btn btn-lg" ng-disabled="sendButtonDisabled" ng-click="sendEmail()">Send!</button>
+                    <button class="btn btn-lg" value="Submit" ng-disabled="submitButtonDisabled" ng-click="sendEmail()">Send!</button>
                 </div>
             </form>
         </div>
