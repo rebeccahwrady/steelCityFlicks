@@ -270,8 +270,12 @@ div[class*='columnsMenu'] {
   flex-wrap: wrap;
   width: 100%;
 }
+#questionText {
+  word-wrap: break-word;
+}
 .questionText {
   word-wrap: break-word;
+  padding-bottom: 15px;
 }
 @media screen and (max-width: 480px) {
   .questionText {
