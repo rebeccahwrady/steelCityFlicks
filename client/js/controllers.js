@@ -341,9 +341,17 @@ app.controller('myRecipesPageCtrl', ['$scope', '$rootScope', '$location', //this
     }
 ]);
 
-app.controller('myMoviesPageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the available movies page html
-    function ($scope, $rootScope, $location) {
-        
+app.controller('myMoviesPageCtrl', ['$scope', '$rootScope', '$location', 'MoviesFactory', //this is the controller for the available movies page html
+    function ($scope, $rootScope, $location, MoviesFactory) {
+        MoviesFactory.query(function(data){
+            console.log("movies");
+            console.log(data);
+            $scope.movies = data;
+        });
+
+        $scope.goToTickets = function(id){
+            $location.path('/movies/' + id)
+        }
     }
 ]);
 
