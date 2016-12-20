@@ -95,12 +95,12 @@
     <h1 id="schedule" class="display-4 text-center m-y-3 text-muted">Schedule</h1>
 
     <ul class="list-group">
-        <li ng-repeat="movie in movies">
+        <li ng-repeat="movie in movies" class="list-group-item">
             <h4 class="list-group-item-heading">{{movie.name}}<span class="label label-danger label-pill pull-right">{{movie.time}}</span></h4>
             {{movie.rating}} ‧ {{movie.genre}} ‧ {{movie.runtime}}<br>
             <button type="button" class="btn btn-danger-outline btn-xs" id="buyticketsbtn" ata-toggle="modal" data-target="#register" ng-click="goToTickets(movie.id)">Buy Tickets</button>
-        </li>
-        <!--<li class="list-group-item">
+        <!--</li>
+        <li class="list-group-item">
             <h4 class="list-group-item-heading">The Princess Bride <span class="label label-danger label-pill pull-right">5:00pm</span></h4>
             PG 1987 ‧ Fantasy/Fantasy ‧ 1h 38m <br>
             <button type="button" class="btn btn-danger-outline btn-xs" id="buyticketsbtn" ata-toggle="modal" data-target="#register">Buy Tickets</button>
