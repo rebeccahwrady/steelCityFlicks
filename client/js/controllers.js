@@ -292,8 +292,37 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                     }
                 }
             }
+
             $rootScope.changeQuestion.innerHTML = "You Should Order " + order;
+
+            var btnTwo = document.createElement('button');
+            btnTwo.setAttribute("class", "menuButtonTry");
+            var resetText = document.createTextNode("Nah, that's not it. Retry!");
+            btnTwo.appendChild(resetText);
+            $rootScope.secondButton = document.createElement('div');
+            $rootScope.secondButton.appendChild(btnTwo);
+            heroWords[0].appendChild($rootScope.secondButton);
+            btnTwo.addEventListener('click', selectGenreReset);
         };
+        
+        function selectGenreReset() {
+            heroWords[0].removeChild($rootScope.secondButton);
+            answerArray = [];
+
+            $rootScope.changeQuestion = document.getElementById("questionText");
+            $rootScope.changeQuestion.innerHTML = "Please Select a Movie Genre";
+
+            for (var i = 0; i < genreArray.length; i++) {
+                var answer = document.createElement('div');
+                var newAnswer = new AnswerBox(genreArray[i]);
+                var name = document.createTextNode(newAnswer.value);
+                answer.appendChild(name);
+                answer.setAttribute("class", "options");
+                answer.setAttribute("id", newAnswer.value);
+                answerDiv.appendChild(answer);
+                answer.addEventListener('click', getGenre);
+            }
+        }
     }
 ]);
 
