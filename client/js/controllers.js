@@ -120,7 +120,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(genreArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "options");
+                answer.setAttribute("class", "col-md-4 col-xs-4 col-centered btn options");
                 answer.setAttribute("id", newAnswer.value);
                 $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getGenre);
@@ -147,7 +147,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(villainArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "options");
+                answer.setAttribute("class", "col-md-4 col-xs-4 col-centered btn options");
                 answer.setAttribute("id", newAnswer.value);
                 $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getVillain);
@@ -176,7 +176,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(tasteArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "options");
+                answer.setAttribute("class", "col-md-4 col-xs-4 col-centered btn options");
                 answer.setAttribute("id", newAnswer.value);
                 $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getSelection);
@@ -326,7 +326,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
                 var newAnswer = new AnswerBox(genreArray[i]);
                 var name = document.createTextNode(newAnswer.value);
                 answer.appendChild(name);
-                answer.setAttribute("class", "options");
+                answer.setAttribute("class", "col-md-4 col-xs-4 col-centered btn options");
                 answer.setAttribute("id", newAnswer.value);
                 $rootScope.answerDiv.appendChild(answer);
                 answer.addEventListener('click', getGenre);
