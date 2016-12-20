@@ -29,9 +29,17 @@ app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location', 'Contact
                 center: coordinates,
                 scrollwheel: false
             });
+            var icon = {
+                url: "../resources/logo.svg",
+                scaledSize: new google.maps.Size(35, 35),
+                origin: new google.maps.Point(0,0), // origin
+                anchor: new google.maps.Point(0, 0)
+            }
+            
             var marker = new google.maps.Marker({
                 position: coordinates,
-                map: map
+                map: map,
+                icon: icon
             });
         }
         $scope.contactData = {
@@ -154,7 +162,7 @@ app.controller('myMenuPageCtrl', ['$scope', '$rootScope', '$location', //this is
 
         function selectTaste() {
 
-            $rootScope.changeQuestion.innerHTML = "Please Select What Taste You Are Looking For";
+            $rootScope.changeQuestion.innerHTML = "Please Select A Flavor Profile";
 
             for (var j = 0; j < genreArray.length; j++) {
                 var answerID = document.getElementById(villainArray[j]);
