@@ -123,6 +123,12 @@ a.link {
   text-align: center;
   margin-bottom: 1em;
 }
+.storyHeading h2 {
+  font-family: "Rye", cursive, Arial, sans-serif;
+  color: #2f0000;
+  text-align: center;
+  margin-bottom: 1em;
+}
 #storyContent {
   padding-bottom: 2em;
 }
@@ -144,8 +150,8 @@ a.link {
   height: 30em;
 }
 .team {
-  padding: 75px 0;
-  padding-bottom: 40px;
+  padding: 4.6em 0;
+  padding-bottom: 2.5em;
 }
 @media (max-width: 991px) {
   .team {
@@ -159,7 +165,7 @@ a.link {
 .profile h3 {
   font-weight: normal;
   font-size: 1.35em;
-  margin: 10px 0 0 0;
+  margin: 0.75em 0 0 0;
   font-family: "Rye", cursive, Arial, sans-serif;
 }
 .profile h4 {
@@ -170,6 +176,8 @@ a.link {
 }
 .profile .img-box {
   opacity: 1;
+  height: 100%;
+  width: 100%;
   display: block;
   position: relative;
 }
@@ -180,15 +188,15 @@ a.link {
   margin: 0.1em;
   display: inline-block;
 }
-.img-box ul li a i {
+.fa {
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
 .socialLinks {
   margin-left: -40px;
 }
 .img-box img {
-  border-radius: 100%;
+  border-radius: 50%;
 }
 .blog-header {
   margin-bottom: 0;

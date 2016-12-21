@@ -24,7 +24,14 @@
         margin-bottom: 1em;
     }
 }
-
+.storyHeading {
+    h2 {
+        font-family: @heroFont;
+        color: @darkRed;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
 #storyContent {
     padding-bottom: 2em;
     p {
@@ -48,8 +55,8 @@
 }
 
 .team {
-    padding:75px 0;
-    padding-bottom: 40px;
+    padding:4.6em 0;
+    padding-bottom: 2.5em;
 
     @media (max-width: 991px) {
         padding-bottom: 0;
@@ -62,7 +69,7 @@
 .profile h3 {
 	font-weight: normal;
 	font-size: 1.35em;
-	margin:10px 0 0 0;
+	margin:0.75em 0 0 0;
     font-family: @heroFont;
 }
 .profile h4 {
@@ -73,6 +80,8 @@
 }
 .profile .img-box{
 	opacity: 1;
+    height: 100%;
+    width: 100%;
 	display: block;
 	position: relative;
 }
@@ -81,13 +90,16 @@
     height: 2.5em;
     text-align: center;
     margin: 0.1em;
-    // padding: 5px;
 	display: inline-block;
-    a i {
-        text-decoration: none;
-        color: inherit;
-    }
 }
+
+
+.fa {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 .socialLinks {
     margin-left: -40px;
@@ -95,7 +107,7 @@
 .img-box {
 
     img {
-        border-radius: 100%;
+        border-radius: 50%;
     }
 }
 
