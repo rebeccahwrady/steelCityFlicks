@@ -117,7 +117,7 @@ a.link {
   color: white;
   text-align: center;
 }
-.storyHeading h2 {
+.team h2 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: #2f0000;
   text-align: center;
@@ -142,6 +142,53 @@ a.link {
 }
 .contactMapContainers #googleMap {
   height: 30em;
+}
+.team {
+  padding: 75px 0;
+  padding-bottom: 40px;
+}
+@media (max-width: 991px) {
+  .team {
+    padding-bottom: 0;
+  }
+}
+.profile {
+  margin-top: 1.6em;
+  text-align: center;
+}
+.profile h3 {
+  font-weight: normal;
+  font-size: 1.35em;
+  margin: 10px 0 0 0;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.profile h4 {
+  font-size: 1em;
+  font-weight: lighter;
+  margin-top: 0.3em;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.profile .img-box {
+  opacity: 1;
+  display: block;
+  position: relative;
+}
+.img-box ul li {
+  width: 2.5em;
+  height: 2.5em;
+  text-align: center;
+  margin: 0.1em;
+  display: inline-block;
+}
+.img-box ul li a i {
+  text-decoration: none;
+  color: inherit;
+}
+.socialLinks {
+  margin-left: -40px;
+}
+.img-box img {
+  border-radius: 100%;
 }
 .blog-header {
   margin-bottom: 0;

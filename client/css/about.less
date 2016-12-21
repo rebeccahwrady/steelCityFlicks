@@ -16,7 +16,7 @@
         text-align: center;
     }
 }
-.storyHeading {
+.team {
     h2 {
         font-family: @heroFont;
         color: @darkRed;
@@ -26,7 +26,6 @@
 }
 
 #storyContent {
-    // border-bottom: 0.5em solid @mainRed;
     padding-bottom: 2em;
     p {
         text-align: justify;
@@ -45,6 +44,58 @@
     }
     #googleMap {
     height: 30em;
+    }
+}
+
+.team {
+    padding:75px 0;
+    padding-bottom: 40px;
+
+    @media (max-width: 991px) {
+        padding-bottom: 0;
+    }
+}
+.profile {
+	margin-top: 1.6em;
+    text-align: center;
+}
+.profile h3 {
+	font-weight: normal;
+	font-size: 1.35em;
+	margin:10px 0 0 0;
+    font-family: @heroFont;
+}
+.profile h4 {
+	font-size: 1em;
+	font-weight: lighter;
+	margin-top: 0.3em;
+    font-family: @heroFont;
+}
+.profile .img-box{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+.img-box ul li{
+	width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    margin: 0.1em;
+    // padding: 5px;
+	display: inline-block;
+    a i {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.socialLinks {
+    margin-left: -40px;
+}
+.img-box {
+
+    img {
+        border-radius: 100%;
     }
 }
 
