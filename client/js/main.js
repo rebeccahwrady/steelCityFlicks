@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 var app = angular.module('myFlicks', ['ngRoute', 'ngResource', 'myFlicks.controllers', 'myFlicks.factories']);
 
 

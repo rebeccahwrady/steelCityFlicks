@@ -97,7 +97,7 @@
         <li ng-repeat="movie in movies" class="list-group-item">
             <h4 class="list-group-item-heading">{{movie.name}}<span class="label label-danger label-pill pull-right">{{movie.time}}</span></h4>
             {{movie.rating}} ‧ {{movie.genre}} ‧ {{movie.runtime}}<br>
-            <button type="button" class="btn btn-danger-outline btn-xs" id="buyticketsbtn" ata-toggle="modal" data-target="#register" ng-click="goToTickets(movie.id)">Buy Tickets</button>
+            <button type="button" class="btn btn-danger-outline btn-xs" id="buyticketsbtn" ata-toggle="modal" ng-click="goToTickets(movie.id)">Buy Tickets</button>
         <!--</li>
         <li class="list-group-item">
             <h4 class="list-group-item-heading">The Princess Bride <span class="label label-danger label-pill pull-right">5:00pm</span></h4>
