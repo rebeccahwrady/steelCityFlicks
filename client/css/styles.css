@@ -248,7 +248,7 @@ a.link {
   background-position: center;
   margin-bottom: 0px;
   background-attachment: fixed;
-  height: 25em;
+  height: 35em;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -334,18 +334,36 @@ div[class*='columnsMenu'] {
   /* vertical alignment of the inline element */
 }
 .options {
-  height: 100px;
-  line-height: 70px;
-  width: 150px;
-  padding: 1em;
+  height: 50px;
+  width: 200px;
   display: inline;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   border: 5px solid black;
   color: black;
   background-color: white;
   font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .options {
+    padding: 0px;
+    font-size: 20px;
+    height: 50px;
+    word-wrap: break-word;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+  }
+}
+.row-centered {
+  text-align: center;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* inline-block space fix */
+  margin-right: -4px;
 }
 .menuButton {
   height: 50px;
@@ -365,21 +383,24 @@ div[class*='columnsMenu'] {
   padding-left: 0px;
 }
 .questionText {
-  height: 25px;
-  padding-top: 20px;
+  height: 50px;
   margin-bottom: 5px;
   max-width: 100%;
   word-wrap: break-word;
+  display: block;
 }
 @media screen and (max-width: 480px) {
   .questionText {
-    height: 100px;
     max-width: 100%;
     word-wrap: break-word;
   }
 }
 #questionText {
-  font-size: 35px;
+  font-size: 25px;
+  height: 100%;
+}
+.answerText {
+  display: inline-block;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
