@@ -13,7 +13,7 @@
   background-position: center;
   margin-bottom: 0px;
   background-attachment: fixed;
-  height: 25em;
+  height: 35em;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -44,20 +44,6 @@ div[class*='columnsMenu'] {
   flex-wrap: wrap;
   width: 100%;
 }
-#questionText {
-  word-wrap: break-word;
-}
-.questionText {
-  word-wrap: break-word;
-  padding-bottom: 15px;
-}
-@media screen and (max-width: 480px) {
-  .questionText {
-    height: 100px;
-    max-width: 100%;
-    word-wrap: break-word;
-  }
-}
 .mine > [class*='words'] {
   display: flex;
   flex-direction: column;
@@ -74,14 +60,18 @@ div[class*='columnsMenu'] {
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
+  font-size: 25px;
+  text-align: center;
 }
 .descrip {
   font-style: italic;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 .title {
   font-size: 25px;
   text-align: center;
-  font-style: "Rye", cursive, Arial, sans-serif;
+  font-family: "Rye", cursive, Arial, sans-serif;
 }
 .food-container {
   width: 1025px;
@@ -109,18 +99,36 @@ div[class*='columnsMenu'] {
   /* vertical alignment of the inline element */
 }
 .options {
-  height: 70px;
-  line-height: 70px;
-  width: 100px;
-  padding: 1em;
+  height: 50px;
+  width: 200px;
   display: inline;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   border: 5px solid black;
   color: black;
   background-color: white;
-  font-size: 15px;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .options {
+    padding: 0px;
+    font-size: 20px;
+    height: 50px;
+    word-wrap: break-word;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+  }
+}
+.row-centered {
+  text-align: center;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* inline-block space fix */
+  margin-right: -4px;
 }
 .menuButton {
   height: 50px;
@@ -131,6 +139,7 @@ div[class*='columnsMenu'] {
   height: 50px;
   width: 300px;
   font-size: 15px;
+  margin-top: 15px;
 }
 .menu-area {
   width: 100%;
@@ -139,10 +148,22 @@ div[class*='columnsMenu'] {
   padding-left: 0px;
 }
 .questionText {
-  font-size: 20px;
-  height: 25px;
-  padding-top: 20px;
+  height: 50px;
   margin-bottom: 5px;
   max-width: 100%;
   word-wrap: break-word;
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .questionText {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+}
+#questionText {
+  font-size: 25px;
+  height: 100%;
+}
+.answerText {
+  display: inline-block;
 }

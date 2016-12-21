@@ -117,7 +117,7 @@ a.link {
   color: white;
   text-align: center;
 }
-.storyHeading h2 {
+.team h2 {
   font-family: "Rye", cursive, Arial, sans-serif;
   color: #2f0000;
   text-align: center;
@@ -142,6 +142,53 @@ a.link {
 }
 .contactMapContainers #googleMap {
   height: 30em;
+}
+.team {
+  padding: 75px 0;
+  padding-bottom: 40px;
+}
+@media (max-width: 991px) {
+  .team {
+    padding-bottom: 0;
+  }
+}
+.profile {
+  margin-top: 1.6em;
+  text-align: center;
+}
+.profile h3 {
+  font-weight: normal;
+  font-size: 1.35em;
+  margin: 10px 0 0 0;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.profile h4 {
+  font-size: 1em;
+  font-weight: lighter;
+  margin-top: 0.3em;
+  font-family: "Rye", cursive, Arial, sans-serif;
+}
+.profile .img-box {
+  opacity: 1;
+  display: block;
+  position: relative;
+}
+.img-box ul li {
+  width: 2.5em;
+  height: 2.5em;
+  text-align: center;
+  margin: 0.1em;
+  display: inline-block;
+}
+.img-box ul li a i {
+  text-decoration: none;
+  color: inherit;
+}
+.socialLinks {
+  margin-left: -40px;
+}
+.img-box img {
+  border-radius: 100%;
 }
 .blog-header {
   margin-bottom: 0;
@@ -248,7 +295,7 @@ a.link {
   background-position: center;
   margin-bottom: 0px;
   background-attachment: fixed;
-  height: 25em;
+  height: 35em;
 }
 .heroWords {
   font-family: "Rye", cursive, Arial, sans-serif;
@@ -334,18 +381,36 @@ div[class*='columnsMenu'] {
   /* vertical alignment of the inline element */
 }
 .options {
-  height: 100px;
-  line-height: 70px;
-  width: 150px;
-  padding: 1em;
+  height: 50px;
+  width: 200px;
   display: inline;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   border: 5px solid black;
   color: black;
   background-color: white;
   font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .options {
+    padding: 0px;
+    font-size: 20px;
+    height: 50px;
+    word-wrap: break-word;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+  }
+}
+.row-centered {
+  text-align: center;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* inline-block space fix */
+  margin-right: -4px;
 }
 .menuButton {
   height: 50px;
@@ -365,21 +430,24 @@ div[class*='columnsMenu'] {
   padding-left: 0px;
 }
 .questionText {
-  height: 25px;
-  padding-top: 20px;
+  height: 50px;
   margin-bottom: 5px;
   max-width: 100%;
   word-wrap: break-word;
+  display: block;
 }
 @media screen and (max-width: 480px) {
   .questionText {
-    height: 100px;
     max-width: 100%;
     word-wrap: break-word;
   }
 }
 #questionText {
-  font-size: 35px;
+  font-size: 25px;
+  height: 100%;
+}
+.answerText {
+  display: inline-block;
 }
 #theater-seats {
   background-image: url("../resources/theater-seats.jpg");
