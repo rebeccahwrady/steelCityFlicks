@@ -485,6 +485,9 @@ app.controller('myTicketsPageCtrl', ['$scope', '$rootScope', '$location', 'Purch
                         console.log('purchased');
                     })
 
+                    var purchaseFrm = document.getElementById('select-tickets');
+                    purchaseFrm.reset();
+                    alert("Thank you for your purchase! Your tickets will be waiting at the box office.")
                     console.log("success!");
                 }
             });
